@@ -1,32 +1,11 @@
-* style.css */
 body {
-  font-family: Roboto;
-  color: #404042;
-  font-size: 18px;
-}
-
-h1, h2, h3 {
-  font-family: Chivo;
-}
-
-a {
-  color: #1A48E3;
-  font-weight: bold;
-  text-decoration: none;
-  transition: .3s;
-}
-
-a:hover {
-  color: #CE2FAE;
-
-  body {
-  font-family: Roboto;
+  font-family: Overpass;
   margin: 0;
 }
 
 h1, h2, h3 {
   color: #404042;
-  font-family: Roboto;
+  font-family: Chivo;
 }
 
 p {
@@ -103,39 +82,9 @@ p {
 .footer p {
   color: white;
 }
-
 .cards {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 16px;
 }
 
-@media (max-width: 800px) {
-  .cards {
-    grid-template-columns: 1fr;
-  }
-  
-  .card-white {
-    width: auto;
-  }
-}
-  
-/* Container media queries */
-@media (min-width: 500px) {
-  .container {
-    width: 400px;
-  }
-}
-
-
-@media (min-width: 800px) {
-  .container {
-    width: 600px;
-  }
-}
-
-@media (min-width: 1000px) {
-  .container {
-    width: 800px;
-  }
-}
