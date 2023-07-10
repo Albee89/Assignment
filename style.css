@@ -9,7 +9,7 @@ h1, h2, h3 {
 }
 
 p {
-  color: #404042;
+  color: #FF338D;
   opacity: .7;
 }
 
@@ -27,7 +27,7 @@ p {
 }
 
 .banner h1 {
-  color: white;
+  color: 404042;
   font-size: 45px;
   margin: 0;
 }
