@@ -88,7 +88,8 @@ p {
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 16px;
 }
- /* Cards media queries */
+
+
 @media (max-width: 800px) {
   .cards {
     grid-template-columns: 1fr;
@@ -99,7 +100,6 @@ p {
   }
 }
   
-/* Container media queries */
 @media (min-width: 500px) {
   .container {
     width: 400px;
