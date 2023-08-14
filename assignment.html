@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+<script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+<script src='https://unpkg.com/babel-standalone@6.26.0/babel.js'></script>
+<script type="text/babel" src="like_widget.js"></script>
+
   
     <title>Sunshine Jets Soccer Club</title>
     <meta charset="UTF-8">
@@ -15,10 +20,29 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
   <main>
-    
-  <element onscroll="myScript"></element>
    
     <header>
+    <script>
+
+        $(function() {
+    
+    
+       var people = [];
+    
+       $.getJSON('package,json', function(data) {
+           $.each(data.person, function(i, f) {
+              var tblRow = "<tr>" + "<td>" + f.firstName + "</td>" +
+               "<td>" + f.lastName + "</td>" + "<td>" + f.job + "</td>" + "<td>" + f.roll + "</td>" + "</tr>"
+               $(tblRow).appendTo("#userdata tbody");
+         });
+    
+       });
+    
+    });
+    </script>
+    </head>
+
+  
       <div class="wrapper">
       <section id='steezy'>
       <h1>Sunshine Jets</span> Soccer Club</h1>
@@ -30,17 +54,19 @@
       <a href="photos.html">Photo Gallery</a>
       <a href = "videos.html">Videos</a>
       <a href="about.html">About</a>
-      <a href="contact.html">Contact Us</a>
+      <a href="contact.html">Contact</a>
       </div>
    
   </header>
-  <p>
-        
-    <em>For the fans, for the future</em>
+
+  <p><em>For the fans, for the future</em>
   </p>
   <body>
   <main>
-  
+  <div id="root"></div>
+  render(<App />, document.getElementById('root'));
+
+
   <section>
     <div class="search">
       <input type="text" placeholder="Search Sports">
@@ -48,7 +74,7 @@
   </section> 
   <section>
     <div class="grid-container">Member Login:
-    <input type="text" placeholder="Enter Username" name="Username" required>
+    <input type=#text placeholder="Enter Username" name="Username" required>
     <input type="password" placeholder="Enter Password" name="psw" required>
     <button type="submit">Login</button>
       <label style="color:azure"></label>
@@ -59,52 +85,165 @@
 
   
 <section id="imgages-carousel">
-  
+  <h2>Latest News</h2>
       <div class="img-carousel-container">
              <div class="img-carousel">
-              <h2>Latest News</h2>
+             
+             
                  <div>
-                  <img src="kurt-soccer.jpg" style="width:200px" style="height:200px">
+                  <img src="kurt-soccer.jpg" style="width:400px" style="height:400px">
                   </div>
 
                   <div>
-                 <img src="womens-soccer.jpg" style="width:200px" style="height:200px"> 
+                 <img src="womens-soccer.jpg" style="width:400px" style="height:400px"> 
                      </div>
                      
                   <div>
-                 <img src="news1.png" style="width:200px" style="height:200px">
+                 <img src="news1.png" style="width:400px" style="height:400px">
                     </div>
                     
                     <div>
-                 <img src="news2.png" style=width:200px style="height:200px"> 
+                 <img src="news2.png" style=width:400px style="height:400px"> 
                     </div>
+                    <button>
+                    <button id="prev"><i class="fas fa-chevron-left fa-2x"></i></button>
+                    <button id="next"><i class="fas fa-chevron-right fa-2x"></i></button> 
+        </div> 
+      </section>
 
-             <button id="prev"><i class="fas fa-chevron-left fa-2x"></i></button>
-             <button id="next"><i class="fas fa-chevron-right fa-2x"></i></button> 
-         </div>        
-  </section> 
+      
 
+<table style="background-color: white">
+   
+
+  <th><em>Events Calendar - August 2023</em></th>
+
+<tr>
+      <th>Saturday 1st</th>
+<td colspan="4" class="stage-earth">ALL-DAY PREMIERE: Sunshine Jets vs Leo Suns</td>
+</tr><tr>
+      <th>7:00pm</th>
+<td colspan="4" class="stage-mars">Sunshine Jets vs Carseldine Corvettes</td>
+</tr>
+<tr>
+<th>Sunday 2nd</th>
+<td colspan="4" class="stage-earth"> ALL-DAY PREMIERE: Sunshine Jets vs DaVincis</td>
+</tr>
+<tr>
+<th>10:00am</th>
+<td colspan="4" class="stage-venus">Sunshine Jets vs Ashgrove Turbos</td>
+</tr>
+
+  <tr>
+      <th>6:30pm</th>
+      <td colspan="4" class="stage-earth">Juniors Grand Final</td>
+      </tr>
+<tr>
+      <th>7:30pm</th>
+      <td colspan="5" class="stage-mars">Sunshine Jets vs North Gympie</td>
+</tr>
+
+ <tr>
+  <th>Saturday 9th</th>
+  </tr>
+  <tr>
+  <th>10:30am</th>
+   <td colspan="6" class="stage-venus">Leo Suns vs North Gympie</td>
+</tr>
+
+<tr>
+      <th>Wednesday 15th</th>
+      </tr>
+      <tr>
+      <th>7:30pm</th>
+<td colspan="4" class="stage-earth">Womens Grand Final</td>
+  </tr>
+      
+  <tr>
+      <th>Friday 21st</th>
+      </tr>
+  <tr>
+  <th>7:00pm</th>
+  <td colspan="2" class="stage-mars">Sunshine Jets Juniors League</td>
+  </tr>
+  
+  <tr>
+<th>Saturday August 22</th>
+  </tr>
+  <tr>
+      <th>7:00pm</th>
+<td colspan="2" class="stage-mars">Sunshine Jets vs Maroorbra</td>
+</tr>
+
+
+  <tr>
+      <th>Sunday 23</th>
+      <td colspan="5" class="stage-earth">ALL-DAY EVENT:Sunshine Jets Regional Finals</td>
+</tr>
+
+
+</table>
           
-  <script src="assignment.js"></script>
 
+<div class="container">
+	
+	<div class="table">
+		<div class="table-header">
+			<div class="header__item"><a id="name" class="filter__link" href="#">Recent Scores</a></div>
+			<div class="header__item"><a id="wins" class="filter__link filter__link--number" href="#">Sunshine Jets vs SunStars</a></div>
+			<div class="header__item"><a id="draws" class="filter__link filter__link--number" href="#">Sunshine Jets vs Nambour</a></div>
+			<div class="header__item"><a id="losses" class="filter__link filter__link--number" href="#">Sunshine Jets vs Albion Dragons</a></div>
+			<div class="header__item"><a id="total" class="filter__link filter__link--number" href="#">Sunshine Jets vs South-East Eagles</a></div>
+		</div>
+
+		<div class="table-content">	
+			<div class="table-row">	
+				<div class="table-data">APRIL</div>
+				<div class="table-data">2:1</div>
+				<div class="table-data">1:3</div>
+				<div class="table-data">3:2</div>
+				<div class="table-data">1:2</div>
+			</div>
+
+			<div class="table-row">
+				<div class="table-data">MAY</div>
+				<div class="table-data">1:2</div>
+				<div class="table-data">1:2</div>
+				<div class="table-data">2:2</div>
+				<div class="table-data">2:1</div>
+			</div>
+
+			<div class="table-row">
+				<div class="table-data">JUNE</div>
+				<div class="table-data">1:2</div>
+				<div class="table-data">2:1</div>
+				<div class="table-data">3:1</div>
+				<div class="table-data">1:2</div>
+            </div>	
+
+        <div class="table-row">
+          <div class="table-data">JULY</div>
+          <div class="table-data">1:2</div>
+          <div class="table-data">2:1</div>
+          <div class="table-data">3:1</div>
+          <div class="table-data">1:2</div>
+            </div>	
+
+          <div class="table-row">
+            <div class="table-data">AUGUST</div>
+            <div class="table-data">1:2</div>
+            <div class="table-data">2:1</div>
+            <div class="table-data">3:1</div>
+            <div class="table-data">1:2</div>
+             </div>
+            </table>
+            </div>
+
+  
+
+  <script src="assignment.js"></script>
 
 </body>
 </main>
 </html>
-  
 
-
-
-  <!----
-
-<div class="imgcontainer"></div>
-<form action="action_page.php" method="post">
-      <img src="img_avatar2.png" alt="Avatar" class="avatar">
-    </div>
-  -->
-            
-
-
-          
-
-          
