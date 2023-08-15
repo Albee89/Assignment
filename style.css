@@ -61,7 +61,7 @@ h1,h2,h3,h4,h5,h6 {
 	padding:($half-spacing-unit * 1.5) 0;
 	
 	&:nth-of-type(odd) {
-		background-color:#81D4FA
+		background-color:#81D4FA;
 	}
   
 }
@@ -181,7 +181,7 @@ h1,h2,h3,h4,h5,h6 {
 
 #checkbox {
   font-size: 13px;
-  font-color:blue;
+  color:#000;
   border-width: 2px;
 }
 
@@ -310,7 +310,7 @@ table {
   border: #000 solid 0.5px;
   
   tr:nth-child(even) th {
-    color: #ccc;
+    color: lightblue;
     font-weight: normal;
   }
   
