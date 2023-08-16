@@ -1,34 +1,20 @@
 
 
-.body {
+  .body {
   margin:0 auto;
   padding: 0;
   overflow-x: hidden;
   padding:$base-spacing-unit;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    max-width:900px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  max-width:900px;
   }
 
   
-    .tile {
-       
-        background:grey;
-        -webkit-transform: translateY(50px) rotate(-5deg) translateZ(0);
-        transform: translateY(50px) rotate(-5deg) translateZ(0);
-        -webkit-transition-delay: .3s;
-        -o-transition-delay: .3s;
-        transition-delay: .3s;
-        -webkit-transition: .4s;
-        -o-transition: .4s;
-        transition: .4s;
-        opacity: 4;
-        -webkit-filter: grayscale(1);
-        filter: grayscale(1);
-    }
-    .bottom-right.inView {
+  
+  .bottom-right.inView {
         opacity: 1;
         -webkit-transform: translateY(0px) rotate(0deg) translateZ(0);
         transform: translateY(0px) rotate(0deg) translateZ(0);
@@ -74,7 +60,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 table {
-	border:0.3px solid $color-form-highlight;
+	border:0.3px azure;
   background-color:black transparent;;
   width:250px;
   height:250px;
@@ -282,32 +268,6 @@ table {
   border-radius: 10px;
 }
 
-.img-carousel-container button {
-  position: absolute;
-  top: calc(50% - 15px);
-  transform: translateY(-50%);
-  border: none;
-  background-color: white;
-  color: #000;
-  cursor: pointer;
-  padding: 10px 15px;
-  outline: none;
-  opacity: 0;
-  transition: all ease-in-out 0.5s;
-}
-#prev {
-  left: 10px;
-}
-#next {
-  right: 10px;
-}
-.img-carousel-container:hover button {
-  opacity: 1;
-}
-.img-carousel-container button:hover {
-  background-color: white;
-}
-
 /** custom scrollbar **/
 .img-carousel::-webkit-scrollbar {
   width: 10px;
@@ -399,13 +359,13 @@ table {
     
     a{
         color:#000000;
-        font-weight: bolder;
+        font-weight: lighter;
         text-decoration: none;
     }
     
     h1{
         font-size:16px;
-        font-weight: bolder;
+        font-weight: light;
     }
     
     
@@ -601,8 +561,8 @@ table {
     }
     
     
-    /* ########################################### */
-    /*            detail.html                      */
+    /* 
+    /*   detail.html                      */
     /* ########################################### */
     
     .head{
@@ -638,7 +598,7 @@ table {
     }
     
     .body .content .comment button{
-        border:none;
+        border:0.4px solid powderblue;
         padding:10px;
         box-shadow: 4px 6px #fff;
         cursor: pointer;
