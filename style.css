@@ -128,7 +128,6 @@ h1,h2,h3,h4,h5,h6 {
 }
 /*scores table----*/
 .scores {
-	border:0.3px azure;
   width:250px;
   height:250px;
   color:black;
@@ -218,15 +217,17 @@ h1,h2,h3,h4,h5,h6 {
   /*------Member Login-----*/
 .grid-container {
   font-size: 13px;
-  width:250px;
-  height:300px;
+  width:200px;
+  height:200px;
   flex:inline;
   color:black;
   border: .5px solid lightblue;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   bottom:5%;
   background-color: black transparent;
+  float:left;
 }
+
 
 /** img-carousel- News **/
 #imgages-carousel {
