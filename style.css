@@ -156,12 +156,17 @@ h1,h2,h3,h4,h5,h6 {
 
 .grid-container {
   font-size: 13px;
+  align-items: center;
+  width:250px;
+  height:300px;
   flex:inline;
   color: white;
   border: .5px solid lightblue;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   align-content: center;
   bottom:5%;
+  float:left;
+  background-color: black transparent;
 }
 
   header {
