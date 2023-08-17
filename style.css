@@ -58,7 +58,7 @@ header {
   p {
     margin-bottom: 2rem;
     line-height: 2;
-    color: azure;
+    color: black;
   }
   .wrapper{
     width: 800px;
@@ -211,14 +211,17 @@ h1,h2,h3,h4,h5,h6 {
 
         }
       }
-
-
-  
+/*----->Video-------*/
+iframe {
+  width:320px;
+  height:320px;
+}
+ 
   /*------Member Login-----*/
 .grid-container {
   font-size: 13px;
-  width:200px;
-  height:200px;
+  width:350px;
+  height:350px;
   flex:inline;
   color:black;
   border: .5px solid lightblue;
@@ -226,6 +229,7 @@ h1,h2,h3,h4,h5,h6 {
   bottom:5%;
   background-color: black transparent;
   float:left;
+  
 }
 
 
@@ -323,6 +327,7 @@ table {
   th,
   td {
     padding: 0.5rem 1rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   }
   
   th {
@@ -361,7 +366,7 @@ table {
     
     html{
         font-size: 14px;
-        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         background-color:lightblue;
         color:#FEFEFE;
     }
