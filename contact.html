@@ -1,71 +1,646 @@
-  
-            <style>
-         
-        body {
-            background-image: url("soccer-game.jpg")
-        }
 
-        h1 {
-            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-            font-size: 70px;
-            font-weight: 600;
-            background-image: linear-gradient(to left, black,red);
-            color: transparent;
-            background-clip: text;
-            -webkit-background-clip: text;
+/*--scroll-----*/
+
+
+    
+    /* Sticky Header Style */ 
+    /* ---------------------------------------- */ 
+    body.sticky-header{
+      padding-top: 100px;
+      header{
+        height: 60px;
+        background-color:powderblue;
+        h1{
+          @include scale(0);
         }
-        
-        #contact_us { 
-        display: grid;
-        width: 20%;
-        height:10%;
-        color:white;
-        font-size: 13px;
-        align-items: right;
-        grid-container:
-        auto auto auto;
-        gap: 15px;
-        padding: 10px;
-        background:black transparent;
+      }
+    }
+
+#checkbox {
+  font-size: 13px;
+  color:#000;
+  border-width: 2px;
+}
+
+#psw {
+  font-size: 13px;
+  font-color: white;
+}
+
+#search {
+  display: inline-block;
+  grid-template-columns:
+  auto auto auto;
+  background-color: white;
+  color:black;
+}
+
+header {
+  width: 100%;
+  height: 250px;
+  background-color: #3498db;
+  text-align: center;
+  position: relative;
+  position: fixed;
+  top: 0;
+  overflow: hidden;
+  @include transition(all .5s ease);
+}
+  h1 { 
+    font-size: 42px;
+    color: #fff;
+    line-height: 230px;
+    text-transform: uppercase;
+    font-weight: 100;
+    @include transition(all .3s ease);
+  }
+  p {
+    margin-bottom: 2rem;
+    line-height: 2;
+    color: black;
+  }
+  .wrapper{
+    width: 800px;
+    margin: 0 auto;
+    border:azure;
+  }
+  .topnav {
+    position: absolute;
+    bottom: 0;
+    height: 60px;
+    line-height: 60px;
+    width: 100%;
+    background-color: rgba(0,0,0,.1);
+    font-weight: lighter;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+      
+
+/*---Main-----*/
+  .body {
+  margin:0 auto;
+  padding: 0;
+  overflow-x: hidden;
+  padding:$base-spacing-unit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  max-width:900px;
+  background-image: url(soccer-game.jpg);
+  }
+
+  
+  
+
+main {
+  background-image: url(soccer-game.jpg);
+  align-items: center;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif'
+}
+
+
+body, h1,h2, home {
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+
+{
+sans-serif;
+	margin:0;
+}
+
+
+h1,h2,h3,h4,h5,h6 {
+	margin:0;
+}
+/*Events Timetable------*/
+.container {
+	margin-right:auto;
+	margin-left:auto;
+	display:flex;
+	justify-content:center;
+  width: 100%;
+  height:95%;
+  border:#000 solid 0.2px;
+  background-color: azure;
+  color:#000;
+
+}
+/*scores table----*/
+.scores {
+  width:250px;
+  height:250px;
+  color:black;
+  background-color: azure;
+
+  
+}
+
+.table-header {
+	display:flex;
+	width:100%;
+	background-color:#81D4FA
+	padding:($half-spacing-unit * 1.5) 0;
+  border:azure;
+  color:black;
+}
+
+.table-row {
+	display:flex;
+	width:100%;
+  border:azure;
+	padding:($half-spacing-unit * 1.5) 0;
+  color:black;
+	
+	&:nth-of-type(odd) {
+		background-color:#81D4FA;
+	}
+  
+}
+
+.table-data, .header__item {
+	flex: 1 1 20%;
+	text-align:center;
+  color:black;
+  border:azure;
+}
+
+.header__item {
+	text-transform:uppercase;
+  color:black;
+}
+
+.filter__link {
+	color:lightblue;
+	text-decoration: none;
+	position:relative;
+	display:inline-block;
+	padding-left:$base-spacing-unit;
+	padding-right:$base-spacing-unit;
+	
+	&::after {
+		content:'';
+		position:absolute;
+		right:-($half-spacing-unit * 1.5);
+		color:white;
+		font-size:$half-spacing-unit;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+	
+	&.desc::after {
+		content: '(desc)';
+	}
+
+	&.asc::after {
+		content: '(asc)';
+	}
+	
+}
+
+
+   a {
+      color: #fff;
+      display: inline-block;
+      padding: 10px 15px;
+      line-height: 1;
+      text-decoration: none;
+       @include border-radius(2px);
+        &:hover {
+          @include box-shadow(0 0 0 1px #fff);
+
+        }
+      }
+/*----->Video-------*/
+#video {
+  position: relative;
+  
+}
+
+ 
+#vid-cap {
+  font-size:25px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color:rgba(0,0,0,.1)
+  margin: top 23px;
+  margin-left: 800px;
+  position: relative;
+}
+  /*------Member Login-----*/
+.grid-container {
+  font-size: 16px;
+  width:300px;
+  height:300px;
+  flex:auto;
+  color:black;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  bottom:3%;
+  background-color: black transparent;
+  
+  
+}
+
+#join {
+  width:450px;
+  height:600px;
+  margin-left: -90px;
+}
+
+/*-----Image Container---------*/
+div.gallery {
+  margin: 5px;
+  border: 1px solid #ccc;
+  float: left;
+  width: 180px;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+/** img-carousel- News **/
+#imgages-carousel {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  padding: 40px 0px;
+  bottom: 15px;
+  align-items: center;
+
+}
+.img-carousel-container {
+  width: 400px;
+  position: relative;
+  
+  
+}
+
+.img-carousel {
+  display: flex;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;  
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth; 
+  
+   
+}
+.img-carousel div {
+  flex: none;
+  scroll-snap-align: start;
+  width: 400px;
+  position: relative;
+  
+}
+.img-carousel div img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+  
+}
+.img-carousel div p {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  background: rgba(0,0,0,0.5);
+  color: #fff;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+/** custom scrollbar **/
+.img-carousel::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+.img-carousel::-webkit-scrollbar-thumb {
+  background: transparent red;
+  border-radius: 10px;
+  visibility: hidden;
+}
+.img-carousel::-webkit-scrollbar-track {
+  background: transparent;
+}
+.img-carousel-container:hover .img-carousel::-webkit-scrollbar-thumb {
+  visibility: visible;
+}
+
+@media screen and (max-width: 800px) {
+  .img-carousel-container {
+      width: 100%;
+  }
+  .img-carousel div  {
+      width: 100%;
+  }
+}
+
+.gallery {
+  display: grid;
+  overflow: hidden;
+  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+}
+
+
+table {
+  width: 100%;
+  max-width: 50rem;
+  
+  
+  tr:nth-child(odd) th {
+    color: white;
+    font-weight: lighter;
+  }
+  
+  th,
+  td {
+    padding: 0.5rem 1rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+  
+  th {
+    font-weight: normal;
+    border-top: thin dotted #ccc;
+  }
+  
+  td {
+    font-size: 0.8rem;
+    font-weight: lighter;
+    line-height: 1.4;
+    border: azure;
+    transition: opacity 0.3s ease;
+  }
+  
+  td > span {
+    font-size: 0.8em;
+    font-weight: normal;
+    display: block;
+    width: 100%;
+  }
+
+}
+
+.stage-earth {background-color: #81D4FA};
+.stage-mercury {background-color: #9CCC65};
+.stage-venus {background-color: #656fff};
+.stage-mars {background-color: #B3E5FC};
+.stage-jupiter {background-color: #81D4FA};
+.stage-saturn {background-color: #26C6DA};
+
+
+    {
+        box-sizing: border-box;
+    }
+    
+    html{
+        font-size: 14px;
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        background-color:lightblue;
+        color:#FEFEFE;
+    }
+    
+    a . {
+        color:#000000;
+        font-weight: lighter;
+        text-decoration: none;
+    }
+    
+    h1{
+        font-size:16px;
+        font-weight: light;
+    }
+    
+    
+   
+    /* For the smartphones */
+    @media screen and (max-width: 460px) {
+        .container{
+            margin: 10px;
+            padding: 10px;
         }
     
-
-        p {
-            font-size:13px; 
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
-            top:0%;
-            color: skyblue;
-            width: 20%;
-            height: 10%;
-            
-
+        .subforum-row{
+            display: grid;
+            grid-template-columns: 25% 75%;
+            grid-template-rows: 65% 35%;
+            color:azure;
+            border:azure;
         }
-        
-            </style>
-              
-              <center>
-              <h1>
-                Contact Us
-            </h1>
+    
+        .subforum-devider{
+            display: block;
+            border: azure solid;
+            height: 1px;
+            color:azure;
+            }
+    
+        }
+    
+    /* For the tablets */
+    @media screen and (min-width: 460px) and (max-width: 1024px) {
+        .container{
+            margin: 15px;
+            padding: 15px;
+        }
+    
+        .subforum-row{
+            display: grid;
+            grid-template-columns: 10% 60% 10% 20%;
        
-            <p>Feedback? Compliments? Questions? Contact us now and one of our friendly support staff will get back to you shortly!</p2>
-
-            </center>
-
-            <br>
+        }
+    
+        html{
+            font-size: 14px;
+        }
+    
+        h1{
+            font-size: 16px;
+        }
+    
+      }
+    
+    /* forum info Styling */
+    .forum-info{
+        padding: 20px;
+        background-color: powderblue;
+    }
+    
+    .chart{
+        font-size:20px;
+    }
+  
+    
+    
+    /* ########################################### */
+    /*            posts.html                       */
+    /* ########################################### */
+    
+    /* posts table's head  */
+    .table-head{
+        display: flex;
+    }
+    
+    .table-head div{
+        padding: 5px;
+        margin: 2px;
+        background-color: black;
+        font-weight: bold;
+        
+      
+    }
+    
+    .table-head .status{
+        flex: 5%;
+        border:azure;
+        
+    }
+    
+    .table-head .subjects{
+        flex: 70%;
+        
+       
+    }
+    
+    .table-head .replies{
+        flex: 10%;
+       
+       
 
         
-            <section id="contact_us" style="font-size:11px">
-                    <form method="post">
-              <input type="text" title="firstname" placeholder="Enter your first name" required><br>
-              <input type="text" title="lastname" placeholder="Enter your last name" required><br>
-              <input type="email" title="email" placeholder="Enter your email" required><br>
-              <textarea rows="10" cols="60" placeholder="Enter your message:" required></textarea>
-              <button type="submit">Send</button><br>
-              <input type="checkbox" name="terms" checked href="terms.html">T&C ok with me<input type="checkbox" name="privacy" checked href="privacy.html">Privacy, yeah!
-              <input type="checkbox" name="newsletter" checked>subscribe?
-              
-              </form>
-            </section>
-            
+    }
+    
+    .table-head .last-reply{
+        flex: 15%;
+       
         
+    }
+    
+    /* posts table's body  */
+    
+    .table-row {
+        display: flex;
+       
+    }
+    
+    .table-row .status, .table-row .subjects, .table-row .replies, .table-row .last-reply{
+        padding: 5px;
+        margin: 2px;
+        background-color: black;
+        color:white;
+        border:azure;
+    }
+    
+    .table-row .status{
+        flex: 5%;
+        font-size: 30px;
+        text-align: center;
+        color:azure;
+        border:azure;
+    }
+    
+    .table-row .subjects{
+        flex: 70%;
+        color:azure;
+        border:azure;
+    }
+    
+    .table-row .replies{
+        flex: 10%;
+        color:azure;
+        border:azure;
+    }
+    
+    .table-row .last-reply{
+        flex: 15%;
+        color:azure;
+        border:azure;
+    }
+    
+    
+    /* 
+    /*   detail.html                      */
+    /* ########################################### */
+    
+    .head{
+        display: flex;
+        background-color: lightblue;
+        padding: 5px;
+        font-weight: lighter
+        font-size: 15px;
+        
+    }
+    
+    .authors{
+        flex: 20%;
+    }
+    
+    .content{
+        flex: 80%;
+    }
+    
+    .body{
+        display: flex;
+        background-color: powderblue;
+        padding: 10px;
+        margin-top: 5px;
+        border:0.4px solid powderblue;
+    }
+    
+    .body .authors .username{
+        font-size: 20px;
+    }
+    
+    .body .authors img{
+        max-width: 50px;
+        max-height: 80px;
+    }
+    
+    .body .content .comment button{
+        border:solid powderblue;
+        padding:10px;
+        box-shadow: 4px 6px #fff;
+        cursor: pointer;
+        float: right;
+    }
+    
+    /* comment section */
+    .comment-area{
+        margin-bottom:50px;
+    }
+    
+    .comment-area textarea{
+        width: 100%;
+        min-height: 100px;
+        padding: 10px;
+        margin-block: 10px;
+        color:azure;
+    }
+    
+    .comment-area input{
+        float: right;
+        padding: 10px;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+    
+    .comment-area input:hover{
+        border: solid 1px white;
+    }   
+
+    /* Footer Styling */
+    
+    footer{
+      margin-top: 20px;
+      padding: 20px;
+      background-color: powderblue;
+      display: block;
+      text-align: center;
+  }
