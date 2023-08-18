@@ -1,8 +1,5 @@
 
-/*--scroll-----*/
-
-
-    
+ 
     /* Sticky Header Style */ 
     /* ---------------------------------------- */ 
     body.sticky-header{
@@ -27,13 +24,6 @@
   font-color: white;
 }
 
-#search {
-  display: inline-block;
-  grid-template-columns:
-  auto auto auto;
-  background-color: white;
-  color:black;
-}
 
 header {
   width: 100%;
@@ -75,7 +65,29 @@ header {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   }
       
+/*------Search Bar--------*/
 
+form {
+  background-color:#B3E5FC;
+  width: 450px;
+  height: 44px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  align-items:center;
+  margin-left: 400px;
+  margin-right: 400px;
+  margin-top:22px;
+}
+
+.search-bar {
+  all: unset;
+  font: 16px system-ui;
+  color: #fff;
+  height: 100%;
+  width: 100%;
+  padding: 6px 10px;
+}
 /*---Main-----*/
   .body {
   margin:0 auto;
@@ -193,11 +205,13 @@ h2 {
 	text-align:center;
   color:black;
   border:azure;
+ 
 }
 
 .header__item {
 	text-transform:uppercase;
   color:black;
+  
 }
 
 .filter__link {
@@ -307,32 +321,7 @@ h2 {
   object-fit: cover;
 }
 
-.btn {
-  position:inherit;
-  width: 40px;
-  height: 40px;
-  padding: 10px;
-  border: none;
-  border-radius: 50%;
-  z-index: 10px;
-  cursor: pointer;
-  background-color: #fff;
-  font-size: 18px;
-}
 
-.btn:active {
-  transform: scale(1.1);
-}
-
-.btn-prev {
-  top: 45%;
-  left: 2%;
-}
-
-.btn-next {
-  top: 45%;
-  right: 2%;
-}
 
 /** img-carousel- News **/
 #imgages-carousel {
@@ -479,7 +468,7 @@ table {
         text-decoration: none;
     }
     
-    h1, {
+    h1 {
         font-size:16px;
         font-weight: light;
     }
@@ -553,7 +542,7 @@ table {
 
     .posts-table {
       float:right;
-      margin-top: 500px;
+      margin-top: 300px;
       font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
       color:gray;
       font-size:29px;
