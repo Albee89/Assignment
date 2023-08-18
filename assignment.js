@@ -130,3 +130,7 @@ prevSlide.addEventListener("click", function () {
   });
 });
 
+
+
+
+
