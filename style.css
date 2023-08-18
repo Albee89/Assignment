@@ -54,7 +54,7 @@ header {
     font-weight: 100;
     @include transition(all .3s ease);
   }
-  p {
+  .p {
     margin-bottom: 2rem;
     line-height: 2;
     color: black;
@@ -100,8 +100,9 @@ main {
 }
 
 
-body, h1,h2, home {
+body, ,h2, home {
   font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+
 }
 
 {
@@ -110,9 +111,37 @@ sans-serif;
 }
 
 
-h1,h2,h3,h4,h5,h6 {
+h1,h2 {
 	margin:0;
 }
+/*hover headings*/
+
+h2 {
+    --s: 0.1em;   /* the thickness of the line */
+    --c: powderblue;
+    
+    color: #0000;
+    padding-bottom: var(--s);
+    background: 
+      linear-gradient(90deg,var(--c) 50%,#000 0) calc(100% - var(--_p,0%))/200% 100%,
+      linear-gradient(var(--c) 0 0) 0% 100%/var(--_p,0%) var(--s) no-repeat;
+    -webkit-background-clip: text,padding-box;
+            background-clip: text,padding-box;
+    transition: 0.5s;
+  }
+  h2:hover {--_p: 100%}
+  
+  
+
+
+h2 {
+  font-family: system-ui, sans-serif;
+  font-size: 5rem;
+  cursor: pointer;
+}
+   
+
+
 /*Events Timetable------*/
 .container {
 	margin-right:auto;
@@ -220,12 +249,14 @@ h1,h2,h3,h4,h5,h6 {
 
  
 #vid-cap {
-  font-size:25px;
+  font-size:15px;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  color:rgba(0,0,0,.1)
-  margin: top 23px;
+  color:rgba(0,0,0,.1);
+  margin-top: -18px;
+  margin-bottom: 10px;
   margin-left: 800px;
-  position: relative;
+  position:relative;
+ 
 }
   /*------Member Login-----*/
 .grid-container {
@@ -248,6 +279,8 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 /*-----Image Container---------*/
+
+
 
 .slide {
   width: 100%;
@@ -275,7 +308,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .btn {
-  position: absolute;
+  position:inherit;
   width: 40px;
   height: 40px;
   padding: 10px;
@@ -446,7 +479,7 @@ table {
         text-decoration: none;
     }
     
-    h1{
+    h1, {
         font-size:16px;
         font-weight: light;
     }
@@ -680,7 +713,8 @@ table {
     footer{
       margin-top: 20px;
       padding: 20px;
-      background-color: powderblue;
+      background-color: azure;
       display: block;
       text-align: center;
+      color:black
   }
