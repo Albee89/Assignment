@@ -32,7 +32,7 @@
 
         <header>
 
-
+<!------------------------------**********HEADER**************----------------------------------------->
             <div class="wrapper">
                 <section id='steezy'>
                     <h1>Sunshine Jets</span> Soccer Club</h1>
@@ -41,9 +41,9 @@
                         <a href="assignment.html">Home</a>
                         <a href="#Events">Events</a>
                         <a href="#posts-table">Forum</a>
-                        <a href="#slides">Gallery</a>
+                        <a href="#slider">Gallery</a>
                         <a href="#video">Videos</a>
-                        <a href="about.html">About</a>
+                        <a href="#footer">About</a>
                         <a href="contact.html">Contact</a>
                     </div>
 
@@ -62,7 +62,7 @@
 
         <br>
         <br>
-
+<!-----------------News Carousel--------------------->
         <section id="imgages-carousel">
             <h2>Latest News</h2>
             <div class="img-carousel-container">
@@ -166,7 +166,7 @@
 
         <br>
         <br>
-
+<!------------SCORES-------------------------->
         <div class="container">
 
             <div class="Scores">
@@ -237,22 +237,22 @@
                             <h2>Videos</h2>
 
                         </section>
-
+<!----------MEMBER LOGIN------------------>
                         <div style="float:left">
                             <div class="grid-container">Member Login:</br>
                                 <input type=#text placeholder="Enter Username" name="Username" required><br>
                                 <input type="password" placeholder="Enter Password" name="psw" required>
                                 <button type="submit">Login</button> <br>
-                                <input type="checkbox" checked="checked" name="remember">Remember me<input
-                                    type="checkbox" name="privacy" checked href="privacy.html">Privacy, yeah!<input
-                                    type="checkbox" name="terms" checked href="terms.html" style="font-size:8px">T's and
-                                C's>
+                                <input type="checkbox" checked="checked" name="remember">Remember me
+                                   <input type="checkbox" name="privacy" checked href="privacy.html">Privacy, yeah!
+                                    <input type="checkbox" name="terms" checked href="terms.html" style="font-size:8px">T's and
+                                C's
                                 <img id="join" src="member-join.png">
                             </div>
                     </section>
 
 
-                    <!--Video----->
+                    <!------------Video----------------->
                     <section id="video">
                         <iframe style="width: 750px; height: 350px; margin-top: -10px; margin-left: 50px;"
                             src="https://www.youtube.com/embed/v=iZxDlA3Auoo" width=420px height=420px>For the fans, for
@@ -298,7 +298,7 @@
 
 
 
-<!--Display posts table-->
+<!--Member Forum Table-------->
 
 
 <div class="posts-table">
@@ -412,9 +412,9 @@
 <div class="table-row">
     <div class="status"><i class="fa fa-rocket"></i></div>
     <div class="subjects">
-        <a href="">Ben Tobias knocks it out of the park</a>
+        <a href="discussion.html">Ben Tobias knocks it out of the park</a>
         <br>
-        <span>Started by<b><a href=""> Konrad Evverson</a></b> .</span>
+        <span>Started by<b><a href="discussion.html"> Konrad Evverson</a></b> .</span>
     </div>
     <div class="replies">
         2 replies <br> 125 views
@@ -432,7 +432,7 @@
     <div class="subjects">
         <a href="">Congrats to Women's League grand finalists Sonny Chase and Alex Meerhed!</a>
         <br>
-        <span>Started by<b><a href=""> Lisa-Ann Frowley</a></b> .</span>
+        <span>Started by<b><a href="discussion.html"> Lisa-Ann Frowley</a></b> .</span>
     </div>
     <div class="replies">
         243 replies <br> 1223 views
@@ -444,12 +444,27 @@
     </div>
 </div>
 
-</main>
+</section>
 
-<form id="form" role="search">
+<section>
+<form id="search" role="search">
     <input id="search-bar"type="search" id="query" name="q" placeholder="Search SJ..." aria-label="Search through site content">
     <button>Search</button>
 </form>
+</section>
+
+<section class="grid-container" id="contact_us">
+    <h2>Contact Us</h2>
+    <p>Feedback? Compliments? Questions? Contact us now and one of our friendly support staff will get back to you shortly!</p>
+<form method="post">
+<input type="text" title="firstname" placeholder="Enter your first name" required>
+<input type="text" title="lastname" placeholder="Enter your last name" required>
+<input type="email" title="email" placeholder="Enter your email" required><br>
+<textarea rows="10" cols="35" placeholder="Enter your message:" required></textarea>
+<button type="submit">Send</button><br>
+
+</section>
+
 
 
 <footer>
