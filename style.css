@@ -67,7 +67,7 @@ header {
       
 /*------Search Bar--------*/
 
-form {
+#search {
   background-color:#B3E5FC;
   width: 450px;
   height: 44px;
@@ -77,7 +77,7 @@ form {
   align-items:center;
   margin-left: 400px;
   margin-right: 400px;
-  margin-top:22px;
+  margin-top:70px;
 }
 
 .search-bar {
@@ -302,6 +302,7 @@ h2 {
   height: 400px;
   position: absolute;
   transition: all 0.4s;
+  
 }
 
 .slider {
@@ -311,7 +312,7 @@ h2 {
   position: relative;
   margin-left:200px;
   margin-right:-150px;
-  margin-top:-30px;
+  margin-top: 60px;
   
   
 }
@@ -696,6 +697,19 @@ table {
     .comment-area input:hover{
         border: solid 1px white;
     }   
+
+    #contact_us {
+        display:inline;
+        align-content: center;
+        background:black transparent;
+        color:skyblue;
+        margin:150px;
+        margin-top:20px;
+        margin-bottom:20px;
+        font-size: 15px;
+        margin-right:-150px;
+        
+    }
 
     /* Footer Styling */
     
