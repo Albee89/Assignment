@@ -575,8 +575,6 @@ table {
     .table-head .replies{
         flex: 10%;
        
-       
-
         
     }
     
@@ -699,16 +697,33 @@ table {
     }   
 
     #contact_us {
-        display:inline;
+        display:grid;
         align-content: center;
         background:black transparent;
         color:skyblue;
         margin:150px;
-        margin-top:20px;
-        margin-bottom:20px;
+        margin-top:120px;
+        margin-bottom:80px;
         font-size: 15px;
         margin-right:-150px;
+        margin-left:150px;
         
+    }
+
+    #promo-pic {
+      width:500px;
+      height:700px;
+      margin-right:-150px;
+      margin-left:650px;
+      margin-top:-420px;
+    }
+
+    #external-link {
+      width:200px;
+      height:200px;
+      grid: inline;
+      margin-left:-200px;
+      margin-right:100px;
     }
 
     /* Footer Styling */
