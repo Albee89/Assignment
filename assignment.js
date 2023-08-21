@@ -134,3 +134,5 @@ prevSlide.addEventListener("click", function () {
 
 
 
+
+
