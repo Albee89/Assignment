@@ -84,7 +84,7 @@ const nextSlide = document.querySelector(".btn-next");
 
 // add event listener and next slide functionality
 nextSlide.addEventListener("click", function () {
-     curSlide++;
+  curSlide++;
 
   slides.forEach((slide, indx) => {
     slide.style.transform = `translateX(${100 * (indx - curSlide)}%)`;
@@ -100,7 +100,7 @@ let maxSlide = slides.length - 1;
 
 
 nextSlide.addEventListener("click", function () {
-  
+
   if (curSlide === maxSlide) {
     curSlide = 0;
   } else {
@@ -121,7 +121,7 @@ prevSlide.addEventListener("click", function () {
   if (curSlide === 0) {
     curSlide = maxSlide;
   } else {
-    curSlide-;
+    curSlide -;
   }
 
   //   move slide by 100%
