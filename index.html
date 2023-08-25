@@ -228,33 +228,31 @@
                     <br>
                     <br>
 
-                    <section>
-                        <!----video caption----->
-                        <section id="vid-cap">
-                            <h2>Videos</h2>
-
-                        </section>
                         <!----------MEMBER LOGIN------------------>
-                        <div style="float:left">
-                            <div class="grid-container">Member Login:</br>
-                                <input type=#text placeholder="Enter Username" name="Username" required><br>
-                                <input type="password" placeholder="Enter Password" name="psw" required>
-                                <button type="submit">Login</button> <br>
-                                <input type="checkbox" name="remember">Remember me
-                                <input type="checkbox" name="privacy" href="privacy.html">Privacy, yeah!
-                                <input type="checkbox" name="terms" href="terms.html" style="font-size:8px">T's and
+                          
+                    <div class="new-container">
+                        <div class="main">
+                            <h2>Member Login</h2>
+                            <form id="form_id" method="post" name="myform">
+                                <label>User Name :</label>
+                                <input type="text" name="username" id="username" />
+                                <label>Password :</label>
+                                <input type="password" name="password" id="password" />
+                                <input type="button" value="Login" id="submit" onclick="validate()" />
+                                <div class="checkbox-terms"></div>
+                                <input type="checkbox" href="myPrivacy" id="myPrivacy">Privacy, yeah!
+                                <input type="checkbox" href="myTerms" id="myTerms" style="font-size:8px">T's and
                                 C's
-                                <img id="join" src="member-join.png">
-                            </div>
-                    </section>
-
+</form>
 
                     <!------------Video----------------->
+                  
+                       <section id="video-cap"><h2>Videos</h2>
+                        </section>
+
                     <section id="video">
-                        <iframe style="width: 750px; height: 350px; margin-top: -10px; margin-left: 50px;"
-                            src="https://www.youtube.com/embed/v=iZxDlA3Auoo" width=420px height=420px>For the fans, for
-                            the
-                            future</iframe>
+
+                        <iframe src="https://www.youtube.com/embed/v=iZxDlA3Auoo" width=800px height=350px></iframe>
                     </section>
 
                     <br>
@@ -446,7 +444,7 @@
 </section>
 
 <section>
-    <form id="search" role="search">
+    <form id="searchbar" role="search">
         <input id="search-bar" type="search" id="query" name="q" placeholder="Search SJ..."
             aria-label="Search through site content">
         <button>Search</button>
