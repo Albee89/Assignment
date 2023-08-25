@@ -1,6 +1,7 @@
 
 
-// Auto carousel
+
+// Auto carousel- News////////////
 const auto = true; // Auto scroll
 const intervalTime = 5000;
 let sliderInterval;
@@ -19,6 +20,7 @@ carousel.addEventListener('mouseleave', (startInterval) => {
     sliderInterval = setInterval(nextCarousel, intervalTime);
   }
 });
+
 
 //for mobile events
 carousel.addEventListener('touchstart', (stopIntervalT) => {
@@ -47,25 +49,6 @@ if (list.length == 0) {
   $(".list-group").visible = false;
 }
 
-var moduleA = angular.module("ModuleA", []);
-
-moduleA.controller("MsgController", function ($scope) {
-  $scope.Message = "測試一下";
-  $scope.User = "World";
-  $scope.response = { msgList: list };
-  $scope.newMsg = function () {
-    //console.log($("#txtNewMsg").val());
-    list.push($("#txtNewMsg").val());
-    $("#txtNewMsg").val("");
-    //console.log(list);
-  };
-
-  $scope.deleteMsg = function (index) {
-    list.splice(index, 1);
-  };
-});
-
-moduleA.controller("UserController", function ($scope) { });
 
 
 // IMAGE GALLERY  //
@@ -77,62 +60,67 @@ slides.forEach((slide, indx) => {
   slide.style.transform = `translateX(${indx * 100}%)`;
 });
 
-let curSlide = 0;
 
-// select next slide button
-const nextSlide = document.querySelector(".btn-next");
-
-// add event listener and next slide functionality
-nextSlide.addEventListener("click", function () {
-  curSlide++;
-
-  slides.forEach((slide, indx) => {
-    slide.style.transform = `translateX(${100 * (indx - curSlide)}%)`;
-  });
-});
-
-const nextSlide = document.querySelector(".btn-next");
-
-
-let curSlide = 0;
 
 let maxSlide = slides.length - 1;
 
 
-nextSlide.addEventListener("click", function () {
-
-  if (curSlide === maxSlide) {
-    curSlide = 0;
-  } else {
-    curSlide++;
-  }
-
 
   slides.forEach((slide, indx) => {
     slide.style.transform = `translateX(${100 * (indx - curSlide)}%)`;
   });
-});
 
-const prevSlide = document.querySelector(".btn-prev");
+////SEARCH BAR////
 
-// add event listener and navigation functionality
-prevSlide.addEventListener("click", function () {
-  // check if current slide is the first and reset current slide to last
-  if (curSlide === 0) {
-    curSlide = maxSlide;
-  } else {
-    curSlide -;
-  }
+function search_website() {
+  let input = document.getElementById('searchbar').value
+  input=input.toLowerCase();
+  let x = document.getElementsByClassName('topnav');
+    
+  for (i = 0; i < x.length; i++) { 
+      if (!x[i].innerHTML.toLowerCase().includes(input)) {
+          x[i].style.display="none";
+      }
+      else {
+          x[i].style.display="list-item";                 
+      }
+  
+}
 
-  //   move slide by 100%
-  slides.forEach((slide, indx) => {
-    slide.style.transform = `translateX(${100 * (indx - curSlide)}%)`;
-  });
-});
-
-
-
+}
 
 
+///member login //////
 
+var attempt = 3; // Variable to count number of attempts.
+// Below function Executes on click of login button.
+function validate(){
+var username = document.getElementById("username").value;
+var password = document.getElementById("password").value;
+if ( username == "Formget" && password == "password123"){
+alert ("Login successfully");
+window.location = "success.html"; // Redirecting to other page.
+return false;
+}
+else{
+attempt --;// Decrementing by one.
+alert("You have left "+attempt+" attempt;");
+// Disabling fields after 3 attempts.
+if( attempt == 0){
+document.getElementById("username").disabled = true;
+document.getElementById("password").disabled = true;
+document.getElementById("submit").disabled = true;
+return false;
+}
+}
+}
+///create new div element///
+let divElement = document.createElement('div');
+divElement=classList.add()
+
+let textNode = document.createTextNode('This is newly created');
+
+divElement.appendChild(textNode);
+let containerDiv = document.querySelector("checkbox-terms");
+containerDiv.appendChild(divElement);
 
