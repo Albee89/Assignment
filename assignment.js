@@ -1,95 +1,3 @@
-
-
-
-// Auto carousel- News////////////
-const auto = true; // Auto scroll
-const intervalTime = 5000;
-let sliderInterval;
-
-
-if (auto) {
-  sliderInterval = setInterval(nextCarousel, intervalTime);
-};
-
-carousel.addEventListener('mouseover', (stopInterval) => {
-  clearInterval(sliderInterval);
-});
-
-carousel.addEventListener('mouseleave', (startInterval) => {
-  if (auto) {
-    sliderInterval = setInterval(nextCarousel, intervalTime);
-  }
-});
-
-
-//for mobile events
-carousel.addEventListener('touchstart', (stopIntervalT) => {
-  clearInterval(sliderInterval);
-});
-carousel.addEventListener('touchend', (startIntervalT) => {
-  if (auto) {
-    sliderInterval = setInterval(nextCarousel, intervalTime);
-  }
-});
-
-//Debounce
-var previousCall;
-window.addEventListener('resize', () => {
-  if (previousCall >= 0) {
-    clearTimeout(previousCall);
-  }
-  previousCall = setTimeout(() => {
-    carousel.scrollBy(-300, 0);
-  }, 200);
-});
-
-var list = [];
-
-if (list.length == 0) {
-  $(".list-group").visible = false;
-}
-
-
-
-// IMAGE GALLERY  //
-
-const slides = document.querySelectorAll(".slide");
-
-
-slides.forEach((slide, indx) => {
-  slide.style.transform = `translateX(${indx * 100}%)`;
-});
-
-
-
-let maxSlide = slides.length - 1;
-
-
-
-  slides.forEach((slide, indx) => {
-    slide.style.transform = `translateX(${100 * (indx - curSlide)}%)`;
-  });
-
-////SEARCH BAR////
-
-function search_website() {
-  let input = document.getElementById('searchbar').value
-  input=input.toLowerCase();
-  let x = document.getElementsByClassName('topnav');
-    
-  for (i = 0; i < x.length; i++) { 
-      if (!x[i].innerHTML.toLowerCase().includes(input)) {
-          x[i].style.display="none";
-      }
-      else {
-          x[i].style.display="list-item";                 
-      }
-  
-}
-
-}
-
-
 ///member login //////
 
 var attempt = 3; // Variable to count number of attempts.
@@ -123,4 +31,79 @@ let textNode = document.createTextNode('This is newly created');
 divElement.appendChild(textNode);
 let containerDiv = document.querySelector("checkbox-terms");
 containerDiv.appendChild(divElement);
+
+// Contact Us ////////////
+
+const contact = document.createElement("p");
+const node = document.createTextNode("Questions? Compliments? Feedback? Chat to our team today!");
+contact.appendChild(node);
+
+const element = document.getElementById("contact_us");
+const child = document.getElementById("p1");
+element.insertBefore(contact, child);
+
+contact.innerHTML = `<form method="post">
+<input type="text" title="firstname" placeholder="Enter your first name" required>
+<input type="text" title="lastname" placeholder="Enter your last name" required>
+<input type="email" title="email" placeholder="Enter your email" required><br>
+<textarea rows="10" cols="35" placeholder="Enter your message:" required></textarea>
+<button type="submit">Send</button><br>
+<div class="checkbox-terms"></div>
+<input type="checkbox" href="myPrivacy" id="myPrivacy">Privacy, yeah!
+<input type="checkbox" href="myTerms" id="myTerms" style="font-size:8px">T's and
+C's
+
+</form>`
+
+///Events/////
+
+let events = [
+  { name: "Monte Falco", height: 1658, place: "Parco Foreste Casentinesi" },
+  { name: "Monte Falterona", height: 1654, place: "Parco Foreste Casentinesi" },
+  { name: "Poggio Scali", height: 1520, place: "Parco Foreste Casentinesi" },
+  { name: "Pratomagno", height: 1592, place: "Parco Foreste Casentinesi" },
+  { name: "Monte Amiata", height: 1738, place: "Siena" }
+];
+
+
+
+
+
+function generateTableHead(table) {
+  let thead = table.createThead();
+  let row = thead.insertRow();
+  }
+
+  for (let key of data) {
+    let th = document.createElement("th");
+    let text = document.createTextNode(key);
+    th.appendChild(text);
+    row.appendChild(th);
+
+    
+    
+  }
+
+function generateTable(table, data) {
+  for (let element of data) {
+    let row = table.insertRow();
+    for (key in element) {
+      let cell = row.insertCell();
+      let text = document.createTextNode(element[key]);
+      cell.appendChild(text);
+    }
+  }
+}
+let table = document.querySelector("event1");
+let data = Object.keys(events[0]);
+generateTable(table, events);
+generateTableHead(table,data);
+
+
+
+
+
+
+
+
 
