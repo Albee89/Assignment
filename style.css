@@ -49,7 +49,6 @@ h1 {
 .p {
   margin-bottom: 2rem;
   line-height: 2;
-  color: black;
 }
 
 .wrapper {
@@ -184,26 +183,35 @@ h2 {
   color: #000;
 
 }
+
 /*//////////EVENTS/////////----*/
 #event1 {
-  display:flexbox;
-  width: 850px;
-  height: 400px;
-  font:15px;
-  color:#81D4FA;
+  display:inline;
+  width:700px;
+  margin-left: 200px;
+  margin-right: 200px;
+  padding:20px;
+  height:300px;
+  font-size: 22px;
+  color: #81D4FA;
+  background-color: black transparent;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  -ms-text-kashida-space: inherit;
   background-color: black transparent;
 }
-#event1.header__item{
-  font:20px;
+
+#event1.header__item {
+  font: 20px;
 }
 
 
 /*scores table----*/
-.scores,  {
-  width: 250px;
-  height: 250px;
-  color: black;
-  background-color: azure;
+.scores
+{
+width:250px;
+height:250px;
+color:black;
+background-color:azure;
 
 
 }
@@ -212,8 +220,8 @@ h2 {
   display: flex;
   width: 100%;
   background-color: #81D4FA padding:($half-spacing-unit * 1.5) 0;
-  border: azure;
-  color: black;
+  border:azure;
+  color:black;
 
 }
 
@@ -275,7 +283,7 @@ h2 {
 
 
 a {
-  black: #fff;
+  color: #fff;
   display: inline-block;
   padding: 10px 15px;
   line-height: 1;
@@ -291,18 +299,18 @@ a {
 /*----->Video-------*/
 
 #video-cap {
-  margin-top:80px;
+  margin-top: 80px;
   margin-left: 450px;
 
-  
+
 }
 
 #video {
   position: relative;
-  margin-top: 5px; 
+  margin-top: 5px;
   margin-left: 450px;
-  
- 
+
+
 }
 
 /*------Member Login-----*/
@@ -315,10 +323,14 @@ a {
   color: black;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   bottom: 3%;
-  background-color: black transparent;
+  background-color: whitesmoke;
 
-  
+
 }
+#form-id {
+  background-color:#B3E5FC;
+}
+
 
 
 
@@ -525,7 +537,6 @@ table {
 .table-row .last-reply {
   padding: 5px;
   margin: 2px;
-  background-color: black;
   color: white;
   border: azure;
 }
@@ -629,16 +640,19 @@ table {
 
 /* /////////////CONTACT///////////*/
 #contact_us {
-  display:inline-flexbox;
   align-content: center;
-  background: black transparent;
   color: skyblue;
   margin-top: 20px;
   margin-bottom: 80px;
   font-size: 15px;
   margin-left: 250px;
- 
 
+
+}
+#form_id {
+  background-color:#B3E5FC;
+  color: skyblue;
+  align-content: center;
 }
 
 /* Footer Styling */
