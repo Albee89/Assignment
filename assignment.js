@@ -1,3 +1,5 @@
+
+
 ///member login //////
 
 var attempt = 3; // Variable to count number of attempts.
@@ -22,15 +24,10 @@ return false;
 }
 }
 }
-///create new div element///
-let divElement = document.createElement('div');
-divElement=classList.add()
 
-let textNode = document.createTextNode('This is newly created');
 
-divElement.appendChild(textNode);
-let containerDiv = document.querySelector("checkbox-terms");
-containerDiv.appendChild(divElement);
+
+
 
 // Contact Us ////////////
 
@@ -55,34 +52,31 @@ C's
 
 </form>`
 
-///Events/////
 
-let events = [
-  { name: "Monte Falco", height: 1658, place: "Parco Foreste Casentinesi" },
-  { name: "Monte Falterona", height: 1654, place: "Parco Foreste Casentinesi" },
-  { name: "Poggio Scali", height: 1520, place: "Parco Foreste Casentinesi" },
-  { name: "Pratomagno", height: 1592, place: "Parco Foreste Casentinesi" },
-  { name: "Monte Amiata", height: 1738, place: "Siena" }
+
+//////////////EVENTS TABLE////////
+
+let games = [
+  { Date: "Saturday 1st", Time: "7:00pm", Game: "ALL-DAY PREMIERE: Sunshine Jets vs Leo Suns" },
+  { Date: "Thursday 6th", Time: "5:00pm", Game: "Sunshine Jets vs Carseldine Corvettes" },
+  { Date: "Saturday 8th", Time: "10:00am", Game: "ALL-DAY PREMIERE: Sunshine Jets vs DaVincis" },
+  {Date: "Thursday 13th", Time: "5:00pm", Game: "Sunshine Jets vs Ashgrove Turbos"},
+  {Date: "Friday 14th", Time: "7:00pm", Game: "Sunshine Jets vs Leo Suns"},
+  {Date: "Saturday 15th", Time: "10:00am", Game: "Sunshine Jets vs North Gympie"},
+ 
 ];
 
 
-
-
-
-function generateTableHead(table) {
-  let thead = table.createThead();
+function generateTableHead(table, data) {
+  let thead = table.createTHead();
   let row = thead.insertRow();
-  }
-
   for (let key of data) {
     let th = document.createElement("th");
     let text = document.createTextNode(key);
     th.appendChild(text);
     row.appendChild(th);
-
-    
-    
   }
+}
 
 function generateTable(table, data) {
   for (let element of data) {
@@ -94,11 +88,13 @@ function generateTable(table, data) {
     }
   }
 }
-let table = document.querySelector("event1");
-let data = Object.keys(events[0]);
-generateTable(table, events);
-generateTableHead(table,data);
 
+let table = document.querySelector("table");
+let data = Object.keys(games[0]);
+
+
+generateTable(table, games);
+generateTableHead(table, data);
 
 
 
