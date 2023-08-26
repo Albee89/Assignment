@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <script src="assignment.js"></script>
+    
     <title style="float:right">Sunshine Jets Soccer Club</span></title>
 
     <meta charset="UTF-8">
@@ -28,29 +28,27 @@
     <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital@1&display=swap" rel="stylesheet">
 
 
-    <main>
+    <header>
 
-        <header>
+        <!------------------------------**********HEADER**************----------------------------------------->
+        <div class="wrapper">
+            <section id='steezy'>
+                <h1>Sunshine Jets</span> Soccer Club</h1>
 
-            <!------------------------------**********HEADER**************----------------------------------------->
-            <div class="wrapper">
-                <section id='steezy'>
-                    <h1>Sunshine Jets</span> Soccer Club</h1>
-
-                    <div class="topnav">
-                        <a href="index.html">Home</a>
-                        <a href="#events">Events</a>
-                        <a href="#recent-scores">Recent Scores</a>
-                        <a href="#Gallery">Gallery</a>
-                        <a href="#video">Videos</a>
-                        <a href="#About-Us">About</a>
-                        <a href="#contact_us">Contact</a>
-                    </div>
+                <div class="topnav">
+                    <a href="index.html">Home</a>
+                    <a href="#table">Events</a>
+                    <a href="#recent-scores">Recent Scores</a>
+                    <a href="#Gallery">Gallery</a>
+                    <a href="#video">Videos</a>
+                    <a href="#About-Us">About</a>
+                    <a href="#contact_us">Contact</a>
+                </div>
 
 
-        </header>
+    </header>
 
-
+</head>
 
 <body ng-app="ModuleA">
 
@@ -92,13 +90,46 @@
         <br>
         <br>
 
-        <table id="events">
-            <h2>Events Calendar - August</h2>
-            <tr>
-                <th>Saturday 1st</th>
-                <td colspan="4" class="stage-earth">ALL-DAY PREMIERE: Sunshine Jets vs Leo Suns</td>
-            </tr>
-            <tr>
+    <h2>Events Calendar - August</h2>
+        <table id ="event1" class="events">
+
+    
+                <thead>
+                <tr>
+                    <th><span>Date</span></th>
+                    <th><span>Game</span></th>
+                    
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Saturday 1st</td>
+                    <td>ALL-DAY PREMIERE: Sunshine Jets vs Leo Suns</td>
+                </tr>
+                <tr>
+                    <td>Monte Falterona</td>
+                    <td>1654</td>
+                    <td>Parco Foreste Casentinesi</td>
+
+                    <tr>
+                        <td>Monte Falco</td>
+                        <td>1658</td>
+                        <td>Parco Foreste Casentinesi</td>
+                    </tr>
+                  
+                        <tr>
+                            <td>Monte Falterona</td>
+                            <td>1654</td>
+                            <td>Parco Foreste Casentinesi</td>
+                </tr>
+                </tbody>
+            </table>
+          
+        
+
+        <!----------------------------------
+           
+          
                 <th>7:00pm</th>
                 <td colspan="4" class="stage-mars">Sunshine Jets vs Carseldine Corvettes</td>
             </tr>
@@ -163,6 +194,7 @@
 
         <br>
         <br>
+        --->
         <!------------SCORES-------------------------->
         <div class="container">
 
@@ -228,8 +260,8 @@
                     <br>
                     <br>
 
-                        <!----------MEMBER LOGIN------------------>
-                          
+                    <!----------MEMBER LOGIN------------------>
+
                     <div class="new-container">
                         <div class="main">
                             <h2>Member Login</h2>
@@ -239,57 +271,61 @@
                                 <label>Password :</label>
                                 <input type="password" name="password" id="password" />
                                 <input type="button" value="Login" id="submit" onclick="validate()" />
+
                                 <div class="checkbox-terms"></div>
                                 <input type="checkbox" href="myPrivacy" id="myPrivacy">Privacy, yeah!
                                 <input type="checkbox" href="myTerms" id="myTerms" style="font-size:8px">T's and
                                 C's
-</form>
+                            </form>
 
-                    <!------------Video----------------->
-                  
-                       <section id="video-cap"><h2>Videos</h2>
-                        </section>
+                            <!------------Video----------------->
 
-                    <section id="video">
+                            <section id="video-cap">
+                                <h2>Videos</h2>
+                            </section>
 
-                        <iframe src="https://www.youtube.com/embed/v=iZxDlA3Auoo" width=800px height=350px></iframe>
-                    </section>
+                            <section id="video">
 
-                    <br>
-                    <br>
-                    <br>
-                    <br>
+                                <iframe src="https://www.youtube.com/embed/v=iZxDlA3Auoo" width=800px
+                                    height=350px></iframe>
+                            </section>
 
-                    <!----Photo Gallery-->
-                    <!-- slider container -->
-                    <div class="slider" id="Gallery">
-                        <h2>Image Gallery</h2>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
 
-                        <!-- slide 1 -->
-                        <div class="slide">
-                            <img src="https://source.unsplash.com/random?landscape,mountain" alt="mountain">
+                            <!----Photo Gallery-->
+                            <!-- slider container -->
+                            <div class="slider" id="Gallery">
+                                <h2>Image Gallery</h2>
 
-                        </div>
+                                <!-- slide 1 -->
+                                <div class="slide">
+                                    <img src="https://source.unsplash.com/random?landscape,mountain" alt="mountain">
 
-                        <!-- slide 2 -->
-                        <div class="slide">
-                            <img src="https://source.unsplash.com/random?landscape,cars" alt="landscape" />
-                        </div>
+                                </div>
 
-                        <!-- slide 3 -->
-                        <div class="slide">
-                            <img src="https://source.unsplash.com/random?landscape,night" alt="nightime landscape" />
-                        </div>
+                                <!-- slide 2 -->
+                                <div class="slide">
+                                    <img src="https://source.unsplash.com/random?landscape,cars" alt="landscape" />
+                                </div>
 
-                        <!-- slide 4 -->
-                        <div class="slide">
-                            <img src="https://source.unsplash.com/random?landscape,city" alt="city landscape" />
-                        </div>
-                        <!----
+                                <!-- slide 3 -->
+                                <div class="slide">
+                                    <img src="https://source.unsplash.com/random?landscape,night"
+                                        alt="nightime landscape" />
+                                </div>
+
+                                <!-- slide 4 -->
+                                <div class="slide">
+                                    <img src="https://source.unsplash.com/random?landscape,city" alt="city landscape" />
+                                </div>
+                                <!----
                      <p href="photos.html">Send your photo to Sunshine Jets, and you could be published here!</p>
                      -->
 
-                    </div>
+                            </div>
 
 </body>
 
@@ -298,12 +334,12 @@
 <!--Member Forum Table-------->
 
 
-<div class="posts-table">
+<div id="MyTable">
     <h2>Sunshine Jets Official Forum</h2>
 </div>
 
 
-<div class="table-row">
+<div class ="table-row">
     <div class="status"><i class="fa fa-rocket"></i></div>
     <div class="subjects">
         <a href="">Will Marley Smith be back in time for Premiere League?</a>
@@ -451,20 +487,20 @@
     </form>
 </section>
 
-<section id="contact_us" class="grid-container">
+<div id="contact_us">
     <h2>Contact Us</h2>
-    <p>Feedback? Compliments? Questions? Contact us now and one of our friendly support staff will get back to you
-        shortly!</p>
-    <form method="post">
-        <input type="text" title="firstname" placeholder="Enter your first name" required>
-        <input type="text" title="lastname" placeholder="Enter your last name" required>
-        <input type="email" title="email" placeholder="Enter your email" required><br>
-        <textarea rows="10" cols="35" placeholder="Enter your message:" required></textarea>
-        <button type="submit">Send</button><br>
+    <p id="p1">
+
+    </p> 
+        
+    
+    <form id= "form1">
+
+    </form>
+</div>
+ 
 
 </section>
-
-<img id="promo-pic" src="member-join.png" id="external-link" href="discussion.html">
 
 
 
@@ -473,13 +509,15 @@
     <p>For seventeen years, the Sunshine Jets Sporting Club Lorem ipsum dolor sit amet consectetur adipisicing elit.
         We bring sports into families and familes into sports.Grow with us, for the fans...for the future. </p>
     <div>
-        <a href="terms.html">Ts&Cs</a>
-        <a href="privacy.html">Privacy</a><br>
-        <a href="copyright.html">Copyright 2023Alex Bain</a>
+        <a href="terms">Ts&Cs</a>
+        <a href="privacy">Privacy</a><br>
+        <a>Copyright 2023...Alex Bain</a>
     </div>
 
 </footer>
 
 </body>
+
+<script src="assignment.js"></script>
 
 </html>
