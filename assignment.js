@@ -1,5 +1,4 @@
 
-
 ///member login //////
 
 var attempt = 3; // Variable to count number of attempts.
@@ -213,3 +212,12 @@ for (i = 0; i < coll.length; i++) {
   });
 }
 
+///BUTTON REVEAL MEMBER LOGIN////////
+
+function myfunction()
+{
+    if (document.getElementById("displaytable").style.display === "none")
+        document.getElementById("displaytable").style.display="block";
+    else
+        document.getElementById("displaytable").style.display="none";
+}
