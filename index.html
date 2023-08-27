@@ -142,37 +142,43 @@
                             <br>
                             <br>
 
-                            <!----Photo Gallery-->
-                            <!-- slider container -->
-                            <div class="slider" id="Gallery">
+                            <div style="text-align:center">
                                 <h2>Image Gallery</h2>
+                                  </div>
 
-                                <!-- slide 1 -->
-                                <div class="slide">
-                                    <img src="https://source.unsplash.com/random?landscape,mountain" alt="mountain">
+                                <div class="row">
+                                    <div class="column">
+                                      <img src="https://source.unsplash.com/random?landscape,mountain" alt="mountain" onclick="myFunction(this);">
+                                    </div>
+                                    <div class="column">
+                                      <img src="https://source.unsplash.com/random?landscape,night"
+                                      alt="nightime landscape" onclick="myFunction(this);">
+                                    </div>
+                                    <div class="column">
+                                      <img src="https://source.unsplash.com/random?landscape,city" alt="city landscape" onclick="myFunction(this);">
+                                    </div>
+                                    <div class="column">
+                                      <img src="https://source.unsplash.com/random?landscape,cars" alt="cars in landscape" onclick="myFunction(this);">
+                                    </div>
+                                  </div>
+                                  
+                                  <div class="container">
+                                    
+                                    <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+                                  
+                                
+                                    <img id="expandedImg" style="width:100%">
+                                  
+                                    <div id="imgtext"></div>
+                                  </div>
 
-                                </div>
+                                  <div class="container">
+                                    <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+                                    <img id="expandedImg" style="width:100%">
+                                    <div id="imgtext"></div>
+                                  </div>
 
-                                <!-- slide 2 -->
-                                <div class="slide">
-                                    <img src="https://source.unsplash.com/random?landscape,cars" alt="landscape" />
-                                </div>
-
-                                <!-- slide 3 -->
-                                <div class="slide">
-                                    <img src="https://source.unsplash.com/random?landscape,night"
-                                        alt="nightime landscape" />
-                                </div>
-
-                                <!-- slide 4 -->
-                                <div class="slide">
-                                    <img src="https://source.unsplash.com/random?landscape,city" alt="city landscape" />
-                                </div>
-                                <!----
-                     <p href="photos.html">Send your photo to Sunshine Jets, and you could be published here!</p>
-                     -->
-
-                            </div>
+                        
 
 </body>
 
