@@ -133,53 +133,9 @@ const child2 = document.getElementById("h2");
 element2.insertBefore(scores, child2);
 
 
-scores.innerHTML = `div class="table-header">
-                
-                    <div class="header__item">Sunshine
-                            Jets vs SunStars</div>
-                    <div class="header__item"><>Sunshine
-                            Jets</div>
-                            vs Nambour</a></div>
-                    <div class="header__item>Sunshine
-                            Jets vs Albion Dragons</a></div>
-                    <div class="header__item">Sunshine
-                            Jets vs South-East Eagles</a></div>
-                </div>
-
-                <div class="table-content" id="scores">
-                    <div class="table-row">
-                        <div class="table-data">APRIL</div>
-                        <div class="table-data">2:1</div>
-                        <div class="table-data">1:3</div>
-        <div class="container">
-
-            <div class="Scores" id="recent-scores">
-                <h2>Recent Scores</h2>
-                <div class="table-header">
-                    <div class>Month</a>
-                    </div>
-                    <div class="header__item">Sunshine
-                            Jets
-                            vs SunStars/div>
-                    <div class="header__item">Sunshine
-                            Jets
-                            vs Nambour</div>
-                    <div class="header__item"><Sunshine
-                            Jets vs Albion Dragons</a></div>
-                    <div class="header__item">Sunshine
-                            Jets
-                            vs South-East Eagles</div>
-                </div>
-
-                <div class="table-content" id="scores">
-                    <div class="table-row">
-                        <div class="table-data">APRIL</div>
-                        <div class="table-data">2:1</div>
-                        <div class="table-data">1:3</div>
-                        <div class="container">
+scores.innerHTML =`
 
                             <div class="Scores" id="recent-scores">
-                                <h2>Recent Scores</h2>
                                 <div class="table-header">
                                     <div class="header__item">Month</div>
                                     <div class="header__item">Sunshine
