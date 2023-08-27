@@ -1,8 +1,7 @@
 
 ///member login //////
 
-var attempt = 3; // Variable to count number of attempts.
-// Below function Executes on click of login button.
+var attempt = 3; 
 function validate() {
   var username = document.getElementById("username").value;
   var password = document.getElementById("password").value;
@@ -27,7 +26,6 @@ function validate() {
 
 
 
-
 // Contact Us ////////////
 
 const contact = document.createElement("p");
@@ -43,10 +41,11 @@ contact.innerHTML = `<form method="post">
 <input type="text" title="lastname" placeholder="Enter your last name" required>
 <input type="email" title="email" placeholder="Enter your email" required><br>
 <textarea rows="10" cols="35" placeholder="Enter your message:" required></textarea>
-<button type="submit">Send</button><br>
+<button>Send</button><br>
 <div class="checkbox-terms"></div>
-<input type="checkbox" href="myPrivacy" id="myPrivacy">Privacy, yeah!
-<input type="checkbox" href="myTerms" id="myTerms" style="font-size:8px">T's and
+
+<input type="checkbox" href="#pbutton" id="myPrivacy">Privacy!
+<input type="checkbox" href="#tsbutton">T's and
 C's
 
 </form>`
@@ -96,11 +95,7 @@ generateTable(table, games);
 generateTableHead(table, data);
 
 
-//BOOK TICKETS BUTTON 
 
-
-
-//IMAGE CAROUSELS
 
 
 ///////SEARCH BAR /////////
@@ -193,8 +188,20 @@ scores.innerHTML =`
                                     </div>`
 
 
- ////////////Canvas Jet Drawing///////////
+ ////////////Image Gallery ///////////
 
+ function myFunction(imgs) {
+  
+  var expandImg = document.getElementById("expandedImg");
+
+  var imgText = document.getElementById("imgtext");
+  
+  expandImg.src = imgs.src;
+  
+  imgText.innerHTML = imgs.alt;
+
+  expandImg.parentElement.style.display = "block";
+}
 
 ////////BUTTON T&CS, PRIVACY///////////
 var coll = document.getElementsByClassName("collapsible");
