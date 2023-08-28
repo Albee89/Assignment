@@ -1,7 +1,7 @@
 
 ///member login //////
 
-var attempt = 3; 
+var attempt = 3;
 function validate() {
   var username = document.getElementById("username").value;
   var password = document.getElementById("password").value;
@@ -32,26 +32,26 @@ let carsouselImages = document.querySelectorAll('.img-carousel div');
 
 //Next Carousel
 const nextCarousel = () => {
-    if(carsouselImages[carsouselImages.length - 1]) {
-      carousel.scrollTo(0, 0); 
-    } 
-      carousel.scrollBy(300, 0);
+  if (carsouselImages[carsouselImages.length - 1]) {
+    carousel.scrollTo(0, 0);
+  }
+  carousel.scrollBy(300, 0);
 };
 
 nextBtn.addEventListener('click', e => {
-  nextCarousel(); 
+  nextCarousel();
 });
 
 //Prev Carousel
 const prevCarousel = () => {
-   if(carsouselImages[0]) {
-    carousel.scrollTo(4800,0);
-   }
-    carousel.scrollBy(-300, 0); 
+  if (carsouselImages[0]) {
+    carousel.scrollTo(4800, 0);
+  }
+  carousel.scrollBy(-300, 0);
 };
 
 prevBtn.addEventListener('click', e => {
-   prevCarousel(); 
+  prevCarousel();
 });
 
 
@@ -73,14 +73,14 @@ carousel.addEventListener('mouseleave', (startInterval) => {
   if (auto) {
     sliderInterval = setInterval(nextCarousel, intervalTime);
   }
-}); 
+});
 
 //for mobile events
 carousel.addEventListener('touchstart', (stopIntervalT) => {
-    clearInterval(sliderInterval);
+  clearInterval(sliderInterval);
 });
 carousel.addEventListener('touchend', (startIntervalT) => {
-   if (auto) {
+  if (auto) {
     sliderInterval = setInterval(nextCarousel, intervalTime);
   }
 });
@@ -88,13 +88,13 @@ carousel.addEventListener('touchend', (startIntervalT) => {
 //Debounce
 var previousCall;
 window.addEventListener('resize', () => {
-    if (previousCall >= 0) {
-        clearTimeout(previousCall);
-    } 
-    previousCall = setTimeout(() => {
-      carousel.scrollBy(-300, 0); 
-    }, 200);
-}); 
+  if (previousCall >= 0) {
+    clearTimeout(previousCall);
+  }
+  previousCall = setTimeout(() => {
+    carousel.scrollBy(-300, 0);
+  }, 200);
+});
 // Contact Us ////////////
 
 const contact = document.createElement("p");
@@ -185,7 +185,7 @@ function search_website() {
   }
 }
 
-//////SCORES///
+//////RECENT SCORES///
 
 const scores = document.createElement("table");
 const node2 = document.createTextNode("Questions?");
@@ -196,9 +196,7 @@ const child2 = document.getElementById("h2");
 element2.insertBefore(scores, child2);
 
 
-scores.innerHTML =`
-
-                            <div class="Scores" id="recent-scores">
+scores.innerHTML = `<div class="Scores" id="recent-scores">
                                 <div class="table-header">
                                     <div class="header__item">Month</div>
                                     <div class="header__item">Sunshine
@@ -257,16 +255,16 @@ scores.innerHTML =`
                                     </div>`
 
 
- ////////////Image Gallery ///////////
+////////////Image Gallery ///////////
 
- function myFunction(imgs) {
-  
+function myFunction(imgs) {
+
   var expandImg = document.getElementById("expandedImg");
 
   var imgText = document.getElementById("imgtext");
-  
+
   expandImg.src = imgs.src;
-  
+
   imgText.innerHTML = imgs.alt;
 
   expandImg.parentElement.style.display = "block";
@@ -277,7 +275,7 @@ var coll = document.getElementsByClassName("collapsible");
 var i;
 
 for (i = 0; i < coll.length; i++) {
-  coll[i].addEventListener("click", function() {
+  coll[i].addEventListener("click", function () {
     this.classList.toggle("active");
     var content = this.nextElementSibling;
     if (content.style.display === "block") {
@@ -290,12 +288,11 @@ for (i = 0; i < coll.length; i++) {
 
 ///BUTTON REVEAL MEMBER LOGIN////////
 
-function myfunction()
-{
-    if (document.getElementById("displaytable").style.display === "none")
-        document.getElementById("displaytable").style.display="block";
-    else
-        document.getElementById("displaytable").style.display="none";
+function myfunction() {
+  if (document.getElementById("displaytable").style.display === "none")
+    document.getElementById("displaytable").style.display = "block";
+  else
+    document.getElementById("displaytable").style.display = "none";
 }
 
 ////CANVAS DRAWING////
@@ -309,8 +306,17 @@ function sun() {
   ctx.lineWidth = 5;
 
   ctx.beginPath();
-  ctx.arc(100,100, 50, 0, 2 * Math.PI);
+  ctx.arc(100, 100, 50, 0, 2 * Math.PI);
   ctx.fill();
   ctx.stroke();
 }
 sun();
+
+////SCROLL FUNCTION ON 'ABOUT ME'/////////
+
+$(document).ready(function () {
+  $("#para").scroll(function () {
+    $("#para").css("color", "lightblue");
+    $("#para").css("background", "white");
+  });
+});
