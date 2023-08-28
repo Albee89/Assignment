@@ -142,7 +142,7 @@ h2 {
 h2 {
   --s: 0.1em;
   /* the thickness of the line */
-  --c: powderblue;
+  --c: whitesmoke;
 
   color: #0000;
   padding-bottom: var(--s);
@@ -212,6 +212,7 @@ width:1000px;
 height:180px;
 color:whitesmoke;
 background-color: #3498db;
+margin-left:120px;
 
 }
 
@@ -299,11 +300,15 @@ a {
   }
 }
 
+
+
+
+
 /*----->Video-------*/
 
 #video-cap {
   margin-top: 80px;
-  margin-left: 450px;
+  margin-left: 250px;
 
 
 }
@@ -311,7 +316,7 @@ a {
 #video {
   position: relative;
   margin-top: 5px;
-  margin-left: 450px;
+  margin-left: 250px;
 
 
 }
@@ -345,6 +350,7 @@ a {
 
 /*-----Image Gallery---------*/
 
+
 * {
   box-sizing: border-box;
 }
@@ -356,7 +362,7 @@ a {
   padding: 10px;
 }
 
-/* Style the images inside the grid */
+
 .column img {
   opacity: 0.8;
   cursor: pointer;
@@ -370,8 +376,9 @@ a {
 
 
 .container {
+  margin-bottom: 150px;
   position: relative;
-  display: none;
+  display:;
 }
 
 
@@ -394,8 +401,20 @@ a {
 }
 
 
+.column img:hover {
+  opacity: 1;
+}
+
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 
 /** img-carousel- News **/
+
 #imgages-carousel {
   display: grid;
   align-items: center;
@@ -449,12 +468,68 @@ a {
 }
 
 
+.img-carousel-container button {
+    position: absolute;
+    top: calc(50% - 15px);
+    transform: translateY(-50%);
+    border: none;
+    background-color:#81D4FA;
+    color: #000;
+    cursor: pointer;
+    padding: 10px 15px;
+    border-radius: 50%;
+    outline: none;
+    opacity: 0;
+    transition: all ease-in-out 0.5s;
+}
+#prev {
+    left: 10px;
+}
+#next {
+    right: 10px;
+}
+.img-carousel-container:hover button {
+    opacity: 1;
+}
+.img-carousel-container button:hover {
+    background-color: #81D4FA;
+}
+
+
+.img-carousel::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+.img-carousel::-webkit-scrollbar-thumb {
+    background:#81D4FA;
+    border-radius: 10px;
+    visibility: hidden;
+}
+.img-carousel::-webkit-scrollbar-track {
+    background: transparent;
+}
+.img-carousel-container:hover .img-carousel::-webkit-scrollbar-thumb {
+    visibility: visible;
+}
+
+@media screen and (max-width: 800px) {
+    .img-carousel-container {
+        width: 100%;
+    }
+    .img-carousel div  {
+        width: 100%;
+    }
+}
+
 .gallery {
   display: grid;
   overflow: hidden;
   grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
 }
 
+
+
+/*/////Mmber Forum////*/
 
 
 table {
@@ -495,17 +570,8 @@ table {
 
 }
 
-
-
-
-/* ########################################### */
-/*          MEMBER FORUM                      */
-/* ########################################### */
-
-/* posts table's head  */
-
 #posts-head {
-  margin-top: 300px;
+  margin-top: 30px;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   color: gray;
   font-size: 29px;
@@ -592,7 +658,7 @@ table {
 
 /* 
     /*   detail.html                      */
-/* ########################################### */
+
 
 .head {
   display: flex;
@@ -659,7 +725,7 @@ table {
 }
 
 
-/* /////////////CONTACT///////////*/
+/* /////////////CONTACT//////////////////////*/
 #contact_us {
   align-content: center;
   color: skyblue;
