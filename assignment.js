@@ -302,6 +302,7 @@ function myfunction()
 let canvas = document.getElementById('canvas');
 let ctx = canvas.getContext('2d');
 
+
 function sun() {
   ctx.strokeStyle = 'Yellow';
   ctx.fillStyle = 'rgba(255,255,0,0.1)';
@@ -312,3 +313,4 @@ function sun() {
   ctx.fill();
   ctx.stroke();
 }
+sun();
