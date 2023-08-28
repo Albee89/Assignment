@@ -26,6 +26,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital@1&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 
 
     <header>
@@ -39,7 +40,7 @@
                     <a href="index.html">Home</a>
                     <a href="#event1">Events</a>
                     <a href="#recent-scores">Recent Scores</a>
-                    <a href="#Gallery">Gallery</a>
+                    <a href="#gallery">Gallery</a>
                     <a href="#video">Videos</a>
                     <a href="#About-Us">About</a>
                     <a href="#contact_us">Contact</a>
@@ -51,21 +52,18 @@
 </head>
 <main>
 
-<body ng-app="ModuleA">
+    <body ng-app="ModuleA">
 
-<!----------------CANVAS SUN DRAWING--------------->
 
-<canvas id="canvas" float="left" width="400" height="300"> </canvas>
 
-  
         </section>
 
 
         <br>
         <br>
         <!-----------------News Carousel--------------------->
+        <h2>Latest News</h2>
         <section id="imgages-carousel">
-            <h2>Latest News</h2>
             <div class="img-carousel-container">
                 <div class="img-carousel">
 
@@ -83,340 +81,383 @@
                     </div>
 
                     <div>
-                        <img src="game.png" style=width:400px style="height:360px">
+                        <img src="https://source.unsplash.com/random?landscape,city" style=width:400px
+                            style="height:360px">
                     </div>
                 </div>
 
                 <button id="prev"><i class="fas fa-chevron-left fa-2x"></i></button>
-                <button id="next"><i class="fas fa-chevron-right fa-2x"></i></button> 
+                <button id="next"><i class="fas fa-chevron-right fa-2x"></i></button>
         </section>
 
 
         <br>
-        <br>
 
-  
+        <!------CANVAS DRAWING--------->
+        <canvas id="canvas"></canvas>
+
         <h2>Events Calendar - August</h2>
         <table id="event1" class="events">
-            
+
 
         </table>
 
-          
-          
+
+
+
         <!------------SCORES-------------------------->
         <h2>Recent Scores</h2>
 
         <div class="table-container" id="recent-scores">
-                    
-</div>
 
-    
-                  
-
-                            <!------------Video----------------->
-
-                            <section id="video-cap">
-                                <h2>Videos</h2>
-                            </section>
-
-                            <section id="video">
-
-                                <iframe src="https://www.youtube.com/embed/v=iZxDlA3Auoo" width=800px
-                                    height=350px></iframe>
-                            </section>
-
-                            <br>
-                            <br>
-
-                            <div>
-                                <h2>Image Gallery</h2>
-                                  </div>
-
-                                <div class="row">
-                                    <div class="column">
-                                      <img src="https://source.unsplash.com/random?landscape,mountain" alt="mountain" onclick="myFunction(this);">
-                                    </div>
-                                    <div class="column">
-                                      <img src="https://source.unsplash.com/random?landscape,night"
-                                      alt="nightime landscape" onclick="myFunction(this);">
-                                    </div>
-                                    <div class="column">
-                                      <img src="https://source.unsplash.com/random?landscape,city" alt="city landscape" onclick="myFunction(this);">
-                                    </div>
-                                    <div class="column">
-                                      <img src="https://source.unsplash.com/random?landscape,cars" alt="cars in landscape" onclick="myFunction(this);">
-                                    </div>
-                                  </div>
-                                  
-                                  <div class="container">
-                                    
-                                    <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
-                                
-                                    <img id="expandedImg" style="width:100%">
-                                  
-                                    <div id="imgtext"></div>
-                                  </div>
+        </div>
 
 
 
-                        
 
-</body>
+        <!------------Video----------------->
 
-
-<br>
-<br>
-<br>
-<br>
-
-
-        <!-----------------SEARCH BAR ---------------->
-        <section>
-            <form id="searchbar" role="search">
-                <input id="search-bar" type="search" id="query" name="q" placeholder="Search SJ..."
-                    aria-label="Search through site content">
-                <button>Search</button>
-            </form>
+        <section id="video-cap">
+            <h2>Videos</h2>
         </section>
 
-  <!----------MEMBER LOGIN------------------>
+        <section id="video">
 
-  <div class="new-container">
-    <div class="main">
-        <h2>Member Login</h2>
-        <form id="form_id" method="post" name="myform">
-            <label>User Name :</label>
-            <input type="text" name="username" id="username" />
-            <label>Password :</label>
-            <input type="password" name="password" id="password" />
-            <input type="button" value="Login" id="submit" onclick="validate()" />
+            <iframe src="https://www.youtube.com/embed/v=iZxDlA3Auoo" width=800px height=350px></iframe>
+        </section>
 
-            <div class="checkbox-terms"></div>
-            <a type="checkbox" href="#pbutton">Privacy</a>
-            <input type="checkbox" href="#tsbutton">T's and
-            C's<a>
+        <br>
+        <br>
+        <h2>Image Gallery</h2>
+        <div id="gallery">
+
+        </div>
+
+        <div class="row">
+            <div class="column">
+                <img src="https://source.unsplash.com/random?landscape,mountain" alt="mountain"
+                    onclick="myFunction(this);">
+            </div>
+            <div class="column">
+                <img src="https://source.unsplash.com/random?landscape,night" alt="nightime landscape"
+                    onclick="myFunction(this);">
+            </div>
+            <div class="column">
+                <img src="https://source.unsplash.com/random?landscape,city" alt="city landscape"
+                    onclick="myFunction(this);">
+            </div>
+            <div class="column">
+                <img src="https://source.unsplash.com/random?landscape,cars" alt="cars in landscape"
+                    onclick="myFunction(this);">
+            </div>
+        </div>
+
+        <div class="container">
+
+            <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+
+            <img id="expandedImg" style="width:100%">
+
+            <div id="imgtext"></div>
+        </div>
+
+
+
+
+
+    </body>
+
+
+
+    <!-----------------SEARCH BAR ---------------->
+    <section>
+        <h2>Search</h2>
+        <form id="searchbar" role="search">
+            <input id="search-bar" type="search" id="query" name="q" placeholder="Search SJ..."
+                aria-label="Search through site content">
+            <button>Search</button>
         </form>
+    </section>
+
+    <!----------MEMBER LOGIN------------------>
+
+    <div class="new-container">
+        <div class="main">
+            <h2>Member Login</h2>
+            <form id="form_id" method="post" name="myform">
+                <label>User Name :</label>
+                <input type="text" name="username" id="username" />
+                <label>Password :</label>
+                <input type="password" name="password" id="password" />
+                <input type="button" value="Login" id="submit" onclick="validate()" />
+
+                <div class="checkbox-terms"></div>
+                <a type="checkbox" href="#pbutton">Privacy</a>
+                <input type="checkbox" href="#tsbutton">T's and
+                C's<a>
+            </form>
 
 
-<!--Member Forum Table-------->
-<h2>Sunshine Jets Official Forum</h2>
-<input type="button" value="Member Login" onclick='myfunction();'>
-<div id="displaytable" class="placeholder">
-<table id="displaytable2" width="100%" cellpadding="1" cellspacing="0">
-   
-
-<div class="table-row">
-    <div class="status"><i class="fa fa-rocket"></i></div>
-    <div class="subjects">
-        <a href="">Will Marley Smith be back in time for Premiere League?</a>
-        <br>
-        <span>Started by <b><a href="">Kaley Cuoco</a></b> .</span>
-    </div>
-    <div class="replies">
-        332 replies <br> 1195 views
-    </div>
-
-    <div class="last-reply">
-        May 30 2023
-        <br><b><a href="">Sam Driver carries it home</a></b>
-    </div>
-</div>
-
-<div class="table-row">
-    <div class="status"><i class="fa fa-rocket"></i></div>
-    <div class="subjects">
-        <a href="">Is cross training still worth it for major leagues?</a>
-        <br>
-        <span>Started by<b><a href=""> Frank Harbington</a></b>.</span>
-    </div>
-    <div class="replies">
-        78 replies <br> 667 views
-    </div>
-
-    <div class="last-reply">
-        June 1 2023
-        <br><a href="">Warner missed second pass</a></b>
-    </div>
-</div>
-
-<div class="table-row">
-    <div class="status"><i class="fa fa-rocket"></i></div>
-    <div class="subjects">
-        <a href="">Tickets sold out before Sunday?</a>
-        <br>
-        <span>Started by<b><a href=""> Tom Richards</a></b> .</span>
-    </div>
-    <div class="replies">
-        446 replies <br> 1775 views
-    </div>
-
-    <div class="last-reply">
-        June 3 2023
-        <br><b><a href="">Who else is excited for quarterlies?</a></b>
-    </div>
-</div>
-
-<div class="table-row">
-    <div class="status"><i class="fa fa-rocket"></i></div>
-    <div class="subjects">
-        <a href="">Jets new team training begins next week!</a>
-        <br>
-        <span>Started by <b><a href="">Allie Stevens</a></b> .</span>
-    </div>
-    <div class="replies">
-        344 replies <br> 1546 views
-    </div>
-
-    <div class="last-reply">
-        June 12 2023
-        <br><b><a href="">Great pics from Sunday</a></b>
-    </div>
-</div>
-
-<div class="table-row">
-    <div class="status"><i class="fa fa-rocket"></i></div>
-    <div class="subjects">
-        <a href="">Is early draw worth it for Madden?</a>
-        <br>
-        <span>Started by <b><a href="">Ben Schwartz</a></b> .</span>
-    </div>
-    <div class="replies">
-        222 replies <br> 2004 views
-    </div>
-
-    <div class="last-reply">
-        July 1 2023
-        <br><b><a href="">Eagles beat jets 2:1</a></b>
-    </div>
-</div>
+            <!--Member Forum Table-------->
+            <h2>Sunshine Jets Official Forum</h2>
+            <input type="button" value="Member Login" onclick='myfunction();'>
+            <div id="displaytable" class="placeholder">
+                <table id="displaytable2" width="100%" cellpadding="1" cellspacing="0">
 
 
-<div class="table-row">
-    <div class="status"><i class="fa fa-rocket"></i></div>
-    <div class="subjects">
-        <a href="">Hamish Linklater coming back this month?</a>
-        <br>
-        <span>Started by <b><a href="">Alice Motown</a></b> .</span>
-    </div>
-    <div class="replies">
-        223 replies <br> 1225 views
-    </div>
+                    <div class="table-row">
+                        <div class="status"><i class="fa fa-rocket"></i></div>
+                        <div class="subjects">
+                            <a href="">Will Marley Smith be back in time for Premiere League?</a>
+                            <br>
+                            <span>Started by <b><a href="">Kaley Cuoco</a></b> .</span>
+                        </div>
+                        <div class="replies">
+                            332 replies <br> 1195 views
+                        </div>
 
-    <div class="last-reply">
-        July 12 2023
-        <br><b><a href="">Why was Mike Wheeler benched on Saturday?</a></b>
-    </div>
-</div>
+                        <div class="last-reply">
+                            May 30 2023
+                            <br><b><a href="">Sam Driver carries it home</a></b>
+                        </div>
+                    </div>
 
-<div class="table-row">
-    <div class="status"><i class="fa fa-rocket"></i></div>
-    <div class="subjects">
-        <a href="discussion.html">Ben Tobias knocks it out of the park</a>
-        <br>
-        <span>Started by<b><a href="discussion.html"> Konrad Evverson</a></b> .</span>
-    </div>
-    <div class="replies">
-        2 replies <br> 125 views
-    </div>
+                    <div class="table-row">
+                        <div class="status"><i class="fa fa-rocket"></i></div>
+                        <div class="subjects">
+                            <a href="">Is cross training still worth it for major leagues?</a>
+                            <br>
+                            <span>Started by<b><a href=""> Frank Harbington</a></b>.</span>
+                        </div>
+                        <div class="replies">
+                            78 replies <br> 667 views
+                        </div>
 
-    <div class="last-reply">
-        July 21 2023
-        <br><b><a href="">It's a good day to be a Jets fan :D</a></b>
-    </div>
-</div>
+                        <div class="last-reply">
+                            June 1 2023
+                            <br><a href="">Warner missed second pass</a></b>
+                        </div>
+                    </div>
 
-<title>Sunshine Jets Members forum</title>
-<div class="table-row">
-    <div class="status"><i class="fa fa-rocket"></i></div>
-    <div class="subjects">
-        <a href="">Congrats to Women's League grand finalists Sonny Chase and Alex Meerhed!</a>
-        <br>
-        <span>Started by<b><a href="discussion.html"> Lisa-Ann Frowley</a></b> .</span>
-    </div>
-    <div class="replies">
-        243 replies <br> 1223 views
-    </div>
+                    <div class="table-row">
+                        <div class="status"><i class="fa fa-rocket"></i></div>
+                        <div class="subjects">
+                            <a href="">Tickets sold out before Sunday?</a>
+                            <br>
+                            <span>Started by<b><a href=""> Tom Richards</a></b> .</span>
+                        </div>
+                        <div class="replies">
+                            446 replies <br> 1775 views
+                        </div>
 
-    <div class="last-reply">
-        August 12 2023
-        <br><b><a href="">Tickets on sale now for August Finals! yew</a></b>
-    </div>
-</div>
+                        <div class="last-reply">
+                            June 3 2023
+                            <br><b><a href="">Who else is excited for quarterlies?</a></b>
+                        </div>
+                    </div>
 
-</section>
+                    <div class="table-row">
+                        <div class="status"><i class="fa fa-rocket"></i></div>
+                        <div class="subjects">
+                            <a href="">Jets new team training begins next week!</a>
+                            <br>
+                            <span>Started by <b><a href="">Allie Stevens</a></b> .</span>
+                        </div>
+                        <div class="replies">
+                            344 replies <br> 1546 views
+                        </div>
+
+                        <div class="last-reply">
+                            June 12 2023
+                            <br><b><a href="">Great pics from Sunday</a></b>
+                        </div>
+                    </div>
+
+                    <div class="table-row">
+                        <div class="status"><i class="fa fa-rocket"></i></div>
+                        <div class="subjects">
+                            <a href="">Is early draw worth it for Madden?</a>
+                            <br>
+                            <span>Started by <b><a href="">Ben Schwartz</a></b> .</span>
+                        </div>
+                        <div class="replies">
+                            222 replies <br> 2004 views
+                        </div>
+
+                        <div class="last-reply">
+                            July 1 2023
+                            <br><b><a href="">Eagles beat jets 2:1</a></b>
+                        </div>
+                    </div>
+
+
+                    <div class="table-row">
+                        <div class="status"><i class="fa fa-rocket"></i></div>
+                        <div class="subjects">
+                            <a href="">Hamish Linklater coming back this month?</a>
+                            <br>
+                            <span>Started by <b><a href="">Alice Motown</a></b> .</span>
+                        </div>
+                        <div class="replies">
+                            223 replies <br> 1225 views
+                        </div>
+
+                        <div class="last-reply">
+                            July 12 2023
+                            <br><b><a href="">Why was Mike Wheeler benched on Saturday?</a></b>
+                        </div>
+                    </div>
+
+                    <div class="table-row">
+                        <div class="status"><i class="fa fa-rocket"></i></div>
+                        <div class="subjects">
+                            <a href="discussion.html">Ben Tobias knocks it out of the park</a>
+                            <br>
+                            <span>Started by<b><a href="discussion.html"> Konrad Evverson</a></b> .</span>
+                        </div>
+                        <div class="replies">
+                            2 replies <br> 125 views
+                        </div>
+
+                        <div class="last-reply">
+                            July 21 2023
+                            <br><b><a href="">It's a good day to be a Jets fan :D</a></b>
+                        </div>
+                    </div>
+
+                    <title>Sunshine Jets Members forum</title>
+                    <div class="table-row">
+                        <div class="status"><i class="fa fa-rocket"></i></div>
+                        <div class="subjects">
+                            <a href="">Congrats to Women's League grand finalists Sonny Chase and Alex Meerhed!</a>
+                            <br>
+                            <span>Started by<b><a href="discussion.html"> Lisa-Ann Frowley</a></b> .</span>
+                        </div>
+                        <div class="replies">
+                            243 replies <br> 1223 views
+                        </div>
+
+                        <div class="last-reply">
+                            August 12 2023
+                            <br><b><a href="">Tickets on sale now for August Finals! yew</a></b>
+                        </div>
+                    </div>
+
+                    </section>
 
 
 
-<div id="contact_us">
-    <h2>Contact Us</h2>
-    <p id="p1">
+                    <div id="contact_us">
+                        <h2>Contact Us</h2>
+                        <p id="p1">
 
-    </p>
+                        </p>
+
+                        <form id="form1">
+
+                        </form>
+                    </div>
 
 
-    <form id="form1">
-
-    </form>
-</div>
-
-
-</section>
+                    </section>
 
 </main>
 
-<footer id="About-Us">
-    <h2>For the fans, for the future</h2>
-    <p>For seventeen years, the Sunshine Jets Sporting Club Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        We bring sports into families and familes into sports.Grow with us, for the fans...for the future. </p>
-    <div>
-       
-        
-            
-                <button type="button" class="collapsible" id="tsbutton">Terms and Conditions</button>
+<div id="About-Us">
+    <footer>
+        <h2>For the fans, for the future</h2>
+        <p id="para">For seventeen years, the Sunshine Jets Sporting Club Lorem ipsum dolor sit amet consectetur
+            adipisicing elit.
+            We bring sports into families and familes into sports.Grow with us, Sunshine Jets Sporting Club Lorem ipsum
+            dolor sit amet consectetur adipisicing elit.
+            We bring sports into families and familes into sports.Grow with us, for the fans...for theSunshine Jets
+            Sporting Club Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            We bring sports into families and familes into sports.Grow with us, for the fans...for theSunshine Jets
+            Sporting Club Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            We bring sports into families and familes into sports.Grow with us, for the fans...for the for the
+            fans...for the future. </p>
+        <div>
+
+
+
+            <button type="button" class="collapsible" id="tsbutton">Terms and Conditions</button>
+
+            <div class="content">
+                <p>Website usage terms and conditions
+                    Welcome to our website. If you continue to browse and use this website, you are agreeing to comply
+                    with and be bound by the following terms and conditions of use, which together with our privacy
+                    policy govern [business name]s relationship with you in relation to this website. If you disagree
+                    with any part of these terms and conditions, please do not use our website.
+                    • The content of the pages of this website is for your general information and use only. It is
+                    subject to change without notice.
+                    • This website uses cookies to monitor browsing preferences. If you do allow cookies to be used, the
+                    following personal information may be stored by us for use by third parties: [insert list of
+                    information].
+                    • Neither we nor any third parties provide any warranty or guarantee as to the accuracy, timeliness,
+                    performance, completeness or suitability of the information and materials found or offered on this
+                    website for any particular purpose. You acknowledge that such information and materials may contain
+                    inaccuracies or errors and we expressly exclude liability for any such inaccuracies or errors to the
+                    fullest extent permitted by law.
+                    • Your use of any information or materials on this website is entirely at your own risk, for which
+                    we shall not be liable. It shall be your own responsibility to ensure that any products, services or
+                    information available through this website meet your specific requirements.
+                    • This website contains material which is owned by or licensed to us. This material includes, but is
+                    not limited to, the design, layout, look, appearance and graphics. Reproduction is prohibited other
+                    than in accordance with the copyright notice, which forms part of these terms and conditions.
+                    • All trademarks reproduced in this website, which are not the property of, or licensed to the
+                    operator, are acknowledged on the website.
+                    • Unauthorised use of this website may give rise to a claim for damages and/or be a criminal
+                    offence.
+                    • From time to time, this website may also include links to other websites. These links are provided
+                    for your convenience to provide further information. They do not signify that we endorse the
+                    website(s). We have no responsibility for the content of the linked website(s).
+                    • Your use of this website and any direct....</p>
+
+
+
+                <button type="button" class="collapsible" id="pbutton">Privacy</button>
 
                 <div class="content">
-                    <p>Website usage terms and conditions 
-                        Welcome to our website. If you continue to browse and use this website, you are agreeing to comply with and be bound by the following terms and conditions of use, which together with our privacy policy govern [business name]s relationship with you in relation to this website. If you disagree with any part of these terms and conditions, please do not use our website.
-                        •	The content of the pages of this website is for your general information and use only. It is subject to change without notice.
-                        •	This website uses cookies to monitor browsing preferences. If you do allow cookies to be used, the following personal information may be stored by us for use by third parties: [insert list of information].
-                        •	Neither we nor any third parties provide any warranty or guarantee as to the accuracy, timeliness, performance, completeness or suitability of the information and materials found or offered on this website for any particular purpose. You acknowledge that such information and materials may contain inaccuracies or errors and we expressly exclude liability for any such inaccuracies or errors to the fullest extent permitted by law.
-                        •	Your use of any information or materials on this website is entirely at your own risk, for which we shall not be liable. It shall be your own responsibility to ensure that any products, services or information available through this website meet your specific requirements.
-                        •	This website contains material which is owned by or licensed to us. This material includes, but is not limited to, the design, layout, look, appearance and graphics. Reproduction is prohibited other than in accordance with the copyright notice, which forms part of these terms and conditions.
-                        •	All trademarks reproduced in this website, which are not the property of, or licensed to the operator, are acknowledged on the website.
-                        •	Unauthorised use of this website may give rise to a claim for damages and/or be a criminal offence.
-                        •	From time to time, this website may also include links to other websites. These links are provided for your convenience to provide further information. They do not signify that we endorse the website(s). We have no responsibility for the content of the linked website(s).
-                        •	Your use of this website and any direct....</p>
-  
+                    <p>Website Privacy
+                        In accordance with he provacy act, when you continue to browse and use this website, you are
+                        agreeing to comply with permissions which following terms and conditions of use, which together
+                        with our privacy policy govern [business name]’s relationship with you in relation to this
+                        website. If you disagree with any part of these terms and conditions, please do not use our
+                        website.
+                        • The content of the pages of this website is for your general information and use only. It is
+                        subject to change without notice.
+                        • This website uses cookies to monitor browsing preferences. If you do allow cookies to be used,
+                        the following personal information may be stored by us for use by third parties: [insert list of
+                        information].
+                        • Neither we nor any third parties provide any warranty or guarantee as to the accuracy,
+                        timeliness, performance, completeness or suitability of the information and materials found or
+                        offered on this website for any particular purpose. You acknowledge that such information and
+                        materials may contain inaccuracies or errors and we expressly exclude liability for any such
+                        inaccuracies or errors to the fullest extent permitted by law.
+                        • Your use of any information or materials on this website is entirely at your own risk, for
+                        which we shall not be liable. It shall be your own responsibility to ensure that any products,
+                        services or information available through this website meet your specific requirements.
+                        • This website contains material which is owned by or licensed to us. This material includes,
+                        but is not limited to, the design, layout, look, appearance and graphics. Reproduction is
+                        prohibited other than in accordance with the copyright notice, which forms part of these terms
+                        and conditions.
+                        • All trademarks reproduced in this website, which are not the property of, or licensed to the
+                        operator, are acknowledged on the website.
+                        • Unauthorised use of this website may give rise to a claim for damages and/or be a criminal
+                        offence.
+                        • From time to time, this website may also include links to other websites. These links are
+                        provided for your convenience to provide further information. They do not signify that we
+                        endorse the website(s). We have no responsibility for the content of the linked website(s).
+                        • Your use of this website and any direct....</p>
+                </div>
+
+
+                <a>Alex Bain | Copyright 2023</a>
+
+    </footer>
 </div>
-
-                        <button type="button" class="collapsible" id="pbutton">Privacy</button>
-
-                        <div class="content">
-                            <p>Website Privacy 
-                                In accordance with he provacy act, when you continue to browse and use this website, you are agreeing to comply with permissions which following terms and conditions of use, which together with our privacy policy govern [business name]’s relationship with you in relation to this website. If you disagree with any part of these terms and conditions, please do not use our website.
-                                •	The content of the pages of this website is for your general information and use only. It is subject to change without notice.
-                                •	This website uses cookies to monitor browsing preferences. If you do allow cookies to be used, the following personal information may be stored by us for use by third parties: [insert list of information].
-                                •	Neither we nor any third parties provide any warranty or guarantee as to the accuracy, timeliness, performance, completeness or suitability of the information and materials found or offered on this website for any particular purpose. You acknowledge that such information and materials may contain inaccuracies or errors and we expressly exclude liability for any such inaccuracies or errors to the fullest extent permitted by law.
-                                •	Your use of any information or materials on this website is entirely at your own risk, for which we shall not be liable. It shall be your own responsibility to ensure that any products, services or information available through this website meet your specific requirements.
-                                •	This website contains material which is owned by or licensed to us. This material includes, but is not limited to, the design, layout, look, appearance and graphics. Reproduction is prohibited other than in accordance with the copyright notice, which forms part of these terms and conditions.
-                                •	All trademarks reproduced in this website, which are not the property of, or licensed to the operator, are acknowledged on the website.
-                                •	Unauthorised use of this website may give rise to a claim for damages and/or be a criminal offence.
-                                •	From time to time, this website may also include links to other websites. These links are provided for your convenience to provide further information. They do not signify that we endorse the website(s). We have no responsibility for the content of the linked website(s).
-                                •	Your use of this website and any direct....</p>
-                                </div>
-
-
-                                <a>Alex Bain | Copyright 2023</a>
-
-</footer>
-
 
 
 <script src="assignment.js"></script>
 
-</html>               
-                    
-                                                
-                    
-                    
+</html>
